@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "NQhfCW5p5s8PPPqs8cG/wAo316FBJ7QriMKTJ88WwQqLh8esqVy84QRQC1x/cai2eLxwmkXagH726OpXg5beoA==",
+  "success": true,
+  "projectFilePath": "/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/Calculator.csproj",
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "/root/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "/root/.nuget/packages/microsoft.netcore.app.host.linux-x64/3.1.30/microsoft.netcore.app.host.linux-x64.3.1.30.nupkg.sha512"
+  ],
+  "logs": []
+}

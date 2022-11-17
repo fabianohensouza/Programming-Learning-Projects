@@ -1,0 +1,14 @@
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/bin/Debug/netcoreapp3.1/Calculator
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/bin/Debug/netcoreapp3.1/Calculator.deps.json
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/bin/Debug/netcoreapp3.1/Calculator.runtimeconfig.json
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/bin/Debug/netcoreapp3.1/Calculator.runtimeconfig.dev.json
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/bin/Debug/netcoreapp3.1/Calculator.dll
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/bin/Debug/netcoreapp3.1/Calculator.pdb
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/obj/Debug/netcoreapp3.1/Calculator.csproj.AssemblyReference.cache
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/obj/Debug/netcoreapp3.1/Calculator.GeneratedMSBuildEditorConfig.editorconfig
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/obj/Debug/netcoreapp3.1/Calculator.AssemblyInfoInputs.cache
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/obj/Debug/netcoreapp3.1/Calculator.AssemblyInfo.cs
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/obj/Debug/netcoreapp3.1/Calculator.csproj.CoreCompileInputs.cache
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/obj/Debug/netcoreapp3.1/Calculator.dll
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/obj/Debug/netcoreapp3.1/Calculator.pdb
+/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/Dot Net/Balta/Fundamentos C#/2801/Modulo 06 - Calculator/obj/Debug/netcoreapp3.1/Calculator.genruntimeconfig.cache

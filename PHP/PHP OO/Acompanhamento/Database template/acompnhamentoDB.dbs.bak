@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="MySql" id="Project-31f" database="MySql" >
+	<schema name="acompanhamentoDB" >
+		<table name="abrangencia_ad_pa" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_dominio_ad" type="INT" jt="4" />
+			<column name="id_pa" type="VARCHAR" length="2" jt="12" />
+			<index name="pk_ad_pa" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_abrangencia_ad_pa" to_schema="acompanhamentoDB" to_table="dominio_ad" >
+				<fk_column name="id_dominio_ad" pk="id" />
+			</fk>
+			<fk name="fk_abrangencia_ad_pa_pa" to_schema="acompanhamentoDB" to_table="pa" >
+				<fk_column name="id_pa" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="antivirus" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" type="CHAR" length="4" jt="1" />
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<column name="versão" type="VARCHAR" length="40" jt="12" />
+			<column name="licencas" type="INT" jt="4" />
+			<column name="id_servidor" type="INT" jt="4" />
+			<column name="expiracao" type="DATE" jt="91" />
+			<column name="obs" type="TEXT" jt="-1" />
+			<index name="pk_antivirus" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_antivirus_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_antivirus_servidores" to_schema="acompanhamentoDB" to_table="servidores" >
+				<fk_column name="id_servidor" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="arquivos_anexos" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="tipo_arquivo" type="VARCHAR" length="20" jt="12" />
+			<column name="data" type="DATE" jt="91" />
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<column name="caminho" type="VARCHAR" length="256" jt="12" />
+			<index name="pk_arquivos_anexos" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="avisos_relatorio" >
+			<column name="av1" type="TEXT" jt="-1" />
+			<column name="av2" type="TEXT" jt="-1" />
+			<column name="av3" type="TEXT" jt="-1" />
+			<column name="av4" type="TEXT" jt="-1" />
+			<column name="av6" type="TEXT" jt="-1" />
+			<column name="av7" type="TEXT" jt="-1" />
+			<column name="av8" type="TEXT" jt="-1" />
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="backup" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" type="CHAR" length="4" jt="1" />
+			<column name="id_status_backup" prior="adequado" type="INT" jt="4" />
+			<column name="id_tipo_backup" type="INT" length="20" jt="4" />
+			<column name="id_midia" type="INT" jt="4" />
+			<column name="id_sw_backup" type="INT" jt="4" />
+			<column name="obs" type="TEXT" jt="-1" />
+			<index name="pk_backup" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_backup_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_backup_status_backup" to_schema="acompanhamentoDB" to_table="status_backup" >
+				<fk_column name="id_status_backup" pk="id" />
+			</fk>
+			<fk name="fk_backup_tipo_backup" to_schema="acompanhamentoDB" to_table="tipo_backup" >
+				<fk_column name="id_tipo_backup" pk="id" />
+			</fk>
+			<fk name="fk_backup_midia" to_schema="acompanhamentoDB" to_table="midia" >
+				<fk_column name="id_midia" pk="id" />
+			</fk>
+			<fk name="fk_backup_sw_backup" to_schema="acompanhamentoDB" to_table="sw_backup" >
+				<fk_column name="id_sw_backup" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="cargos" row_count="0" spec="" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="tipo" type="VARCHAR" length="20" jt="12" mandatory="y" />
+			<column name="nome" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<index name="pk_cargos" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></options>
+		</table>
+		<table name="cidades" row_count="0" spec="" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<index name="pk_cidades" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></options>
+		</table>
+		<table name="compatilhamentos" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" type="CHAR" length="4" jt="1" />
+			<column name="id_servidor" type="INT" jt="4" />
+			<column name="enderecos" type="VARCHAR" length="256" jt="12" />
+			<index name="pk_compatilhamentos" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_compatilhamentos" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_compatilhamentos_servidores" to_schema="acompanhamentoDB" to_table="servidores" >
+				<fk_column name="id_servidor" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="contrato" row_count="0" spec="" >
+			<column name="id_coop" type="CHAR" length="4" jt="1" mandatory="y" />
+			<column name="adesao" type="DATE" jt="91" />
+			<column name="rescisao" type="DATE" jt="91" />
+			<column name="status" type="VARCHAR" length="20" jt="12" />
+			<column name="id_arquivos_anexos" type="INT" jt="4" />
+			<index name="fk_contrato_cooperativa" unique="NORMAL" options="(`id_coop`)" >
+				<column name="id_coop" />
+			</index>
+			<fk name="fk_contrato_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" options="" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_contrato_avisos_relatorio" to_schema="acompanhamentoDB" to_table="arquivos_anexos" >
+				<fk_column name="id_arquivos_anexos" pk="id" />
+			</fk>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></options>
+		</table>
+		<table name="cooperativa" row_count="0" spec="" >
+			<column name="id" type="CHAR" length="4" jt="1" mandatory="y" />
+			<column name="nome" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<column name="id_cidade" type="INT" jt="4" mandatory="y" />
+			<column name="ic" type="TINYINT" length="1" jt="-6" mandatory="y" />
+			<column name="id_responsavel_ic" prior="id_responsavel" type="INT" jt="4" />
+			<index name="pk_cooperativa" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="fk_cooperativa_cidades" unique="NORMAL" options="(`id_cidade`)" >
+				<column name="id_cidade" />
+			</index>
+			<index name="fk_cooperativa_equipe_ic" unique="NORMAL" options="(`id_responsavel`)" >
+				<column name="id_responsavel_ic" />
+			</index>
+			<fk name="fk_cooperativa_cidades" to_schema="acompanhamentoDB" to_table="cidades" options="" >
+				<fk_column name="id_cidade" pk="id" />
+			</fk>
+			<fk name="fk_cooperativa_usuarios_ic" to_schema="acompanhamentoDB" to_table="usuarios_ic" >
+				<fk_column name="id_responsavel_ic" pk="id" />
+			</fk>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></options>
+		</table>
+		<table name="dominio_ad" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" type="CHAR" length="4" jt="1" />
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<column name="id_dcprimario" type="INT" jt="4" />
+			<column name="id_dcsecundario" type="INT" jt="4" />
+			<column name="id_dnsprimario" type="INT" jt="4" />
+			<column name="id_dnssecundario" type="INT" jt="4" >
+				<comment><![CDATA[obs]]></comment>
+			</column>
+			<column name="obs" type="TEXT" jt="-1" />
+			<index name="pk_dominio_ad" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_dominio_ad_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_dc1_servidores" to_schema="acompanhamentoDB" to_table="servidores" >
+				<fk_column name="id_dcprimario" pk="id" />
+			</fk>
+			<fk name="fk_dc2_servidores" to_schema="acompanhamentoDB" to_table="servidores" >
+				<fk_column name="id_dcsecundario" pk="id" />
+			</fk>
+			<fk name="fk_dns1_servidores" to_schema="acompanhamentoDB" to_table="servidores" >
+				<fk_column name="id_dnsprimario" pk="id" />
+			</fk>
+			<fk name="fk_dns2_servidores" to_schema="acompanhamentoDB" to_table="servidores" >
+				<fk_column name="id_dnssecundario" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="dominio_internet" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" type="CHAR" length="4" jt="1" />
+			<column name="nome" type="VARCHAR" length="100" jt="12" />
+			<column name="expiracao" type="DATE" jt="91" />
+			<index name="pk_dominio_internet" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_dominio_internet" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="equipe_cooperativa" row_count="0" spec="" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" type="CHAR" length="4" jt="1" mandatory="y" />
+			<column name="nome" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<column name="id_cargo" type="INT" jt="4" mandatory="y" />
+			<column name="email" type="VARCHAR" length="60" jt="12" />
+			<index name="pk_equipe_cooperativa" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="fk_equipe_cooperativa" unique="NORMAL" options="(`id_coop`)" >
+				<column name="id_coop" />
+			</index>
+			<index name="fk_equipe_cooperativa_cargos" unique="NORMAL" options="(`id_cargo`)" >
+				<column name="id_cargo" />
+			</index>
+			<fk name="fk_equipe_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" options="" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_equipe_cooperativa_cargos" to_schema="acompanhamentoDB" to_table="cargos" options="" >
+				<fk_column name="id_cargo" pk="id" />
+			</fk>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></options>
+		</table>
+		<table name="fabricante" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<index name="pk_fabricante" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="file_server" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" type="CHAR" length="4" jt="1" />
+			<column name="tipo" type="VARCHAR" length="20" jt="12" />
+			<index name="pk_file_server" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_file_server_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="firewall_interfaces" row_count="0" spec="" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_firewall_pa" type="INT" jt="4" />
+			<column name="interface" type="VARCHAR" length="5" jt="12" />
+			<column name="funcao" type="VARCHAR" length="20" jt="12" />
+			<column name="ddns" type="VARCHAR" length="100" jt="12" />
+			<index name="pk_firewall_interfaces" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="fk_firewall_interfaces" unique="NORMAL" options="(`id_firewall_pa`)" >
+				<column name="id_firewall_pa" />
+			</index>
+			<fk name="fk_firewall_interfaces" to_schema="acompanhamentoDB" to_table="firewall_pa" options="" >
+				<fk_column name="id_firewall_pa" pk="id" />
+			</fk>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></options>
+		</table>
+		<table name="firewall_modelo" row_count="0" spec="" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<column name="interfaces" prior="nm_interfaces" type="INT" jt="4" />
+			<index name="pk_firewall_modelo" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></options>
+		</table>
+		<table name="firewall_pa" row_count="0" spec="" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_firewall_modelo" type="INT" jt="4" mandatory="y" />
+			<column name="id_pa" type="VARCHAR" length="2" jt="12" />
+			<index name="pk_firewall_pa" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="fk_firewall_pa_pa" unique="NORMAL" options="(`id_pa`)" >
+				<column name="id_pa" />
+			</index>
+			<index name="fk_firewall_pa_firewall_modelo" unique="NORMAL" options="(`id_firewall_modelo`)" >
+				<column name="id_firewall_modelo" />
+			</index>
+			<fk name="fk_firewall_pa_firewall_modelo" to_schema="acompanhamentoDB" to_table="firewall_modelo" options="" >
+				<fk_column name="id_firewall_modelo" pk="id" />
+			</fk>
+			<fk name="fk_firewall_pa_pa" to_schema="acompanhamentoDB" to_table="pa" options="" >
+				<fk_column name="id_pa" pk="id" />
+			</fk>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></options>
+		</table>
+		<table name="grupos_ic" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<column name="tipo" type="VARCHAR" length="20" jt="12" />
+			<index name="pk_grupos_ic" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="item_topico" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="descricao" type="VARCHAR" length="200" jt="12" />
+			<column name="id_topico" type="INT" jt="4" />
+			<column name="multiplicador" type="INT" jt="4" >
+				<defo><![CDATA[1]]></defo>
+			</column>
+			<index name="pk_item_topico" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="fk_item_topico_topicos" unique="NORMAL" options="(`id_topico`)" >
+				<column name="id_topico" />
+			</index>
+			<fk name="fk_item_topico_topicos" to_schema="acompanhamentoDB" to_table="topico" >
+				<fk_column name="id_topico" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="job_backup" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" prior="id_backup" type="CHAR" length="4" jt="1" />
+			<column name="id_servidor" type="INT" jt="4" />
+			<column name="execucao" type="VARCHAR" length="20" jt="12" />
+			<column name="descricao" type="TEXT" length="2" jt="-1" />
+			<index name="pk_job_backup" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_job_backup_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_job_backup_servidores" to_schema="acompanhamentoDB" to_table="servidores" >
+				<fk_column name="id_servidor" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="liberacao_usb" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" type="CHAR" length="4" jt="1" />
+			<column name="id_dir_riscos" type="INT" jt="4" />
+			<column name="chamado" type="VARCHAR" length="30" jt="12" />
+			<column name="data" type="DATE" jt="91" />
+			<column name="equipamentos" type="VARCHAR" length="200" jt="12" />
+			<index name="pk_liberacao_usb" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_liberacao_usb_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_liberacao_usb" to_schema="acompanhamentoDB" to_table="equipe_cooperativa" >
+				<fk_column name="id_dir_riscos" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="midia" prior="midia_backup" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<index name="pk_midia_backup" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="notas_servidores" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_servidor" type="INT" jt="4" />
+			<column name="descricao" type="TEXT" length="200" jt="-1" />
+			<column name="data_hora" type="DATETIME" jt="93" >
+				<defo><![CDATA[CURRENT_TIMESTAMP]]></defo>
+			</column>
+			<index name="pk_notas_servidores" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_notas_servidores_servidores" to_schema="acompanhamentoDB" to_table="servidores" >
+				<fk_column name="id_servidor" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="pa" row_count="0" spec="" >
+			<column name="id" type="VARCHAR" length="2" jt="12" mandatory="y" />
+			<column name="id_coop" type="CHAR" length="4" jt="1" mandatory="y" />
+			<column name="id_cidade" type="INT" jt="4" />
+			<column name="numero" type="VARCHAR" length="2" jt="12" />
+			<index name="pk_pa" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="fk_pa_cooperativa" unique="NORMAL" options="(`id_coop`)" >
+				<column name="id_coop" />
+			</index>
+			<index name="fk_pa_cidades" unique="NORMAL" options="(`id_cidade`)" >
+				<column name="id_cidade" />
+			</index>
+			<fk name="fk_pa_cidades" to_schema="acompanhamentoDB" to_table="cidades" options="" >
+				<fk_column name="id_cidade" pk="id" />
+			</fk>
+			<fk name="fk_pa_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" options="" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></options>
+		</table>
+		<table name="painel" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" type="CHAR" length="4" jt="1" />
+			<column name="evolucao_coop" type="FLOAT" jt="7" />
+			<column name="nome_mes" type="VARCHAR" length="10" jt="12" />
+			<column name="mes" type="VARCHAR" length="2" jt="12" />
+			<column name="ano" type="VARCHAR" length="4" jt="12" />
+			<column name="fechado" type="BOOLEAN" jt="16" />
+			<column name="dt_fechamento" type="DATE" jt="91" />
+			<column name="id_arquivos_anexos" type="INT" jt="4" />
+			<index name="pk_painel" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="fk_painel_cooperativa" unique="NORMAL" options="(`id_coop`)" >
+				<column name="id_coop" />
+			</index>
+			<fk name="fk_painel_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_painel_arquivos_anexos" to_schema="acompanhamentoDB" to_table="arquivos_anexos" >
+				<fk_column name="id_arquivos_anexos" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="painel_item_topico" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_painel" type="INT" length="2" jt="4" />
+			<column name="id_item_topico" prior="id_item" type="INT" jt="4" />
+			<column name="id_status_item" type="INT" length="1" jt="4" />
+			<index name="pk_painel_item_topico" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_painel_item_topico_painel" to_schema="acompanhamentoDB" to_table="painel" >
+				<fk_column name="id_painel" pk="id" />
+			</fk>
+			<fk name="fk_painel_item_topico" to_schema="acompanhamentoDB" to_table="item_topico" >
+				<fk_column name="id_item_topico" pk="id" />
+			</fk>
+			<fk name="fk_painel_item_status" to_schema="acompanhamentoDB" to_table="status_item" >
+				<fk_column name="id_status_item" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="painel_topico" prior="painel_topicos" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_painel" type="INT" length="2" jt="4" />
+			<column name="id_topico" type="INT" jt="4" />
+			<column name="pontos" type="INT" jt="4" />
+			<column name="evolucao" type="FLOAT" jt="7" />
+			<column name="obs" type="TEXT" jt="-1" />
+			<index name="pk_painel_topicos" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_painel_topicos_painel" to_schema="acompanhamentoDB" to_table="painel" >
+				<fk_column name="id_painel" pk="id" />
+			</fk>
+			<fk name="fk_painel_topicos_topico" to_schema="acompanhamentoDB" to_table="topico" >
+				<fk_column name="id_topico" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="prod_sw" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<index name="pk_prod_sw" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="produtos_sonicwall" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" type="CHAR" length="4" jt="1" />
+			<column name="id_prod_sw" type="INT" jt="4" />
+			<column name="licencas" type="INT" jt="4" />
+			<column name="expiracao" type="DATE" jt="91" />
+			<column name="obs" type="TEXT" jt="-1" />
+			<index name="pk_produtos_sonicwall" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_produtos_sonicwall" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_produtos_sonicwall_prod_sw" to_schema="acompanhamentoDB" to_table="prod_sw" >
+				<fk_column name="id_prod_sw" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="servicos" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<column name="id_coop" type="CHAR" length="4" jt="1" />
+			<column name="tipo" type="VARCHAR" length="20" jt="12" />
+			<column name="id_servidor" type="INT" jt="4" />
+			<column name="desenvolvedor" type="VARCHAR" length="60" jt="12" />
+			<column name="endereco" type="VARCHAR" length="256" jt="12" />
+			<column name="descricao" type="TEXT" length="200" jt="-1" />
+			<index name="pk_servicos" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_servicos_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_servicos_servidores" to_schema="acompanhamentoDB" to_table="servidores" >
+				<fk_column name="id_servidor" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="servidores" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" type="CHAR" length="4" jt="1" />
+			<column name="id_pa" type="VARCHAR" length="2" jt="12" />
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<column name="tipo" type="VARCHAR" length="20" jt="12" />
+			<column name="fabricante" type="VARCHAR" length="60" jt="12" />
+			<column name="modelo" type="VARCHAR" length="80" jt="12" />
+			<column name="id_sistema_op" type="INT" jt="4" />
+			<column name="dt_garantia" type="DATE" jt="91" />
+			<column name="ip_lan" type="VARCHAR" length="15" jt="12" />
+			<column name="ip_idrac" type="VARCHAR" length="15" jt="12" />
+			<column name="obs" type="TEXT" jt="-1" />
+			<index name="pk_servidores" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="fk_servidores_cooperativa" unique="NORMAL" options="(`id_coop`)" >
+				<column name="id_coop" />
+			</index>
+			<index name="fk_servidores_pa" unique="NORMAL" options="(`id_pa`)" >
+				<column name="id_pa" />
+			</index>
+			<index name="fk_servidores_sistema_op" unique="NORMAL" options="(`id_sistema_op`)" >
+				<column name="id_sistema_op" />
+			</index>
+			<fk name="fk_servidores_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_servidores_pa" to_schema="acompanhamentoDB" to_table="pa" >
+				<fk_column name="id_pa" pk="id" />
+			</fk>
+			<fk name="fk_servidores_sistema_op" to_schema="acompanhamentoDB" to_table="sistema_op" >
+				<fk_column name="id_sistema_op" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="sistema_op" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<column name="id_fabricante" type="INT" jt="4" />
+			<column name="fim_suporte" type="DATE" jt="91" />
+			<index name="pk_sistema_op" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="status_backup" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<index name="pk_status_backup" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="status_item" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<column name="pontos" type="INT" jt="4" />
+			<index name="pk_status_item" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="sw_backup" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<index name="pk_sw_backup" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="tipo_backup" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<index name="pk_tipo_backup" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="topico" prior="topicos" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" />
+			<column name="descricao" type="TEXT" length="200" jt="-1" />
+			<column name="captulação" type="TEXT" jt="-1" />
+			<column name="valido" type="BOOLEAN" jt="16" />
+			<column name="pontos" type="INT" jt="4" />
+			<index name="pk_topicos" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="usuarios_grupo_ic" >
+			<column name="id_grupo_ic" type="INT" jt="4" />
+			<column name="id_usuario_ic" type="INT" jt="4" />
+			<fk name="fk_usuarios_grupo_ic_grupos_ic" to_schema="acompanhamentoDB" to_table="grupos_ic" >
+				<fk_column name="id_grupo_ic" pk="id" />
+			</fk>
+			<fk name="fk_usuarios_grupo_ic" to_schema="acompanhamentoDB" to_table="usuarios_ic" >
+				<fk_column name="id_usuario_ic" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+		<table name="usuarios_ic" prior="usuario_ic" row_count="0" spec="" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="nome" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<column name="usuario" type="VARCHAR" length="30" jt="12" />
+			<column name="email" type="VARCHAR" length="60" jt="12" mandatory="y" />
+			<column name="senha" type="VARCHAR" length="100" jt="12" />
+			<index name="pk_equipe_ic" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<options><![CDATA[ENGINE=InnoDB DEFAULT CHARSET=utf8mb3]]></options>
+		</table>
+		<table name="visitas" >
+			<column name="id" type="INT" jt="4" mandatory="y" >
+				<identity><![CDATA[AUTO_INCREMENT]]></identity>
+			</column>
+			<column name="id_coop" type="CHAR" length="4" jt="1" />
+			<column name="data_ida" type="DATE" jt="91" />
+			<column name="data_retorno" type="DATE" jt="91" />
+			<column name="id_responsavel_ic" prior="id_usuario_ic" type="INT" jt="4" />
+			<column name="motivo" type="TEXT" jt="-1" />
+			<column name="obs" type="TEXT" jt="-1" />
+			<column name="id_arquivos_anexos" type="INT" jt="4" />
+			<index name="pk_visitas" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_visitas_cooperativa" to_schema="acompanhamentoDB" to_table="cooperativa" >
+				<fk_column name="id_coop" pk="id" />
+			</fk>
+			<fk name="fk_visitas_arquivos_anexos" to_schema="acompanhamentoDB" to_table="arquivos_anexos" >
+				<fk_column name="id_arquivos_anexos" pk="id" />
+			</fk>
+			<fk name="fk_visitas_usuarios_ic" to_schema="acompanhamentoDB" to_table="usuarios_ic" >
+				<fk_column name="id_responsavel_ic" pk="id" />
+			</fk>
+			<options><![CDATA[engine=InnoDB]]></options>
+		</table>
+	</schema>
+	<connector name="MySql" database="MySql" driver_class="com.mysql.jdbc.Driver" driver_jar="mysql-connector-java-8.0.29.jar" driver_desc="Standard" host="localhost" port="3306" instance="acompanhamentoDB" user="root" passwd="cGFsaW8xNDc=" />
+	<layout name="Main Layout" id="Layout-759" show_column_type="y" show_relation="columns" >
+		<comment><![CDATA[MySql]]></comment>
+		<entity schema="acompanhamentoDB" name="abrangencia_ad_pa" color="C1D8EE" x="2176" y="1040" />
+		<entity schema="acompanhamentoDB" name="antivirus" color="C1D8EE" x="2848" y="208" />
+		<entity schema="acompanhamentoDB" name="arquivos_anexos" color="C1D8EE" x="1232" y="240" />
+		<entity schema="acompanhamentoDB" name="avisos_relatorio" color="334DB3" x="2592" y="512" />
+		<entity schema="acompanhamentoDB" name="backup" color="C1D8EE" x="608" y="1040" />
+		<entity schema="acompanhamentoDB" name="cargos" color="BED3F4" x="2192" y="768" />
+		<entity schema="acompanhamentoDB" name="cidades" color="BED3F4" x="1568" y="768" />
+		<entity schema="acompanhamentoDB" name="compatilhamentos" color="C1D8EE" x="1856" y="1376" />
+		<entity schema="acompanhamentoDB" name="contrato" color="BED3F4" x="1232" y="768" />
+		<entity schema="acompanhamentoDB" name="cooperativa" color="BED3F4" x="1568" y="512" />
+		<entity schema="acompanhamentoDB" name="dominio_ad" color="C1D8EE" x="1856" y="1040" />
+		<entity schema="acompanhamentoDB" name="dominio_internet" color="C1D8EE" x="1248" y="528" />
+		<entity schema="acompanhamentoDB" name="equipe_cooperativa" color="BED3F4" x="1888" y="768" />
+		<entity schema="acompanhamentoDB" name="fabricante" color="C1D8EE" x="1232" y="1376" />
+		<entity schema="acompanhamentoDB" name="file_server" color="C1D8EE" x="2176" y="1376" />
+		<entity schema="acompanhamentoDB" name="firewall_interfaces" color="C7F4BE" x="912" y="80" />
+		<entity schema="acompanhamentoDB" name="firewall_modelo" color="C7F4BE" x="608" y="272" />
+		<entity schema="acompanhamentoDB" name="firewall_pa" color="C7F4BE" x="608" y="80" />
+		<entity schema="acompanhamentoDB" name="grupos_ic" color="C1D8EE" x="928" y="768" />
+		<entity schema="acompanhamentoDB" name="item_topico" color="334DB3" x="3088" y="768" />
+		<entity schema="acompanhamentoDB" name="job_backup" color="C1D8EE" x="896" y="1040" />
+		<entity schema="acompanhamentoDB" name="liberacao_usb" color="3986C1" x="2496" y="208" />
+		<entity schema="acompanhamentoDB" name="midia" color="C1D8EE" x="336" y="1120" />
+		<entity schema="acompanhamentoDB" name="notas_servidores" color="C1D8EE" x="1536" y="1040" />
+		<entity schema="acompanhamentoDB" name="pa" color="BED3F4" x="1888" y="512" />
+		<entity schema="acompanhamentoDB" name="painel" color="334DB3" x="2496" y="768" />
+		<entity schema="acompanhamentoDB" name="painel_item_topico" color="334DB3" x="2816" y="768" />
+		<entity schema="acompanhamentoDB" name="painel_topico" color="334DB3" x="2816" y="1056" />
+		<entity schema="acompanhamentoDB" name="prod_sw" color="C1D8EE" x="2112" y="1632" />
+		<entity schema="acompanhamentoDB" name="produtos_sonicwall" color="C1D8EE" x="1856" y="1632" />
+		<entity schema="acompanhamentoDB" name="servicos" color="3986C1" x="1232" y="1632" />
+		<entity schema="acompanhamentoDB" name="servidores" color="C1D8EE" x="1232" y="1040" />
+		<entity schema="acompanhamentoDB" name="sistema_op" color="C1D8EE" x="1536" y="1376" />
+		<entity schema="acompanhamentoDB" name="status_backup" color="C1D8EE" x="896" y="1296" />
+		<entity schema="acompanhamentoDB" name="status_item" color="334DB3" x="3088" y="976" />
+		<entity schema="acompanhamentoDB" name="sw_backup" color="C1D8EE" x="608" y="1296" />
+		<entity schema="acompanhamentoDB" name="tipo_backup" color="C1D8EE" x="336" y="1296" />
+		<entity schema="acompanhamentoDB" name="topico" color="334DB3" x="3408" y="768" />
+		<entity schema="acompanhamentoDB" name="usuarios_grupo_ic" color="C1D8EE" x="672" y="768" />
+		<entity schema="acompanhamentoDB" name="usuarios_ic" color="BED3F4" x="384" y="768" />
+		<entity schema="acompanhamentoDB" name="visitas" color="C1D8EE" x="48" y="720" />
+		<group name="Serviços" color="C4E0F9" >
+			<entity schema="acompanhamentoDB" name="servicos" />
+		</group>
+		<group name="Anexos" color="C4E0F9" >
+			<entity schema="acompanhamentoDB" name="arquivos_anexos" />
+		</group>
+		<group name="Antivirus" color="C4E0F9" >
+			<entity schema="acompanhamentoDB" name="liberacao_usb" />
+			<entity schema="acompanhamentoDB" name="antivirus" />
+		</group>
+		<group name="File Server" color="B3E6E6" >
+			<entity schema="acompanhamentoDB" name="compatilhamentos" />
+			<entity schema="acompanhamentoDB" name="file_server" />
+		</group>
+		<group name="SonicWall" color="C4E0F9" >
+			<entity schema="acompanhamentoDB" name="prod_sw" />
+			<entity schema="acompanhamentoDB" name="produtos_sonicwall" />
+		</group>
+		<group name="Visitas" color="C4E0F9" >
+			<entity schema="acompanhamentoDB" name="visitas" />
+		</group>
+		<group name="firewall_pa" color="EEF7EC" >
+			<entity schema="acompanhamentoDB" name="firewall_pa" />
+			<entity schema="acompanhamentoDB" name="firewall_interfaces" />
+			<entity schema="acompanhamentoDB" name="firewall_modelo" />
+		</group>
+		<group name="Usuarios e Grupos" color="C4E0F9" >
+			<entity schema="acompanhamentoDB" name="grupos_ic" />
+			<entity schema="acompanhamentoDB" name="usuarios_grupo_ic" />
+			<entity schema="acompanhamentoDB" name="usuarios_ic" />
+		</group>
+		<group name="ActiveDirectory" color="C4E0F9" >
+			<entity schema="acompanhamentoDB" name="abrangencia_ad_pa" />
+			<entity schema="acompanhamentoDB" name="dominio_ad" />
+		</group>
+		<group name="Backup" color="C4E0F9" >
+			<entity schema="acompanhamentoDB" name="backup" />
+			<entity schema="acompanhamentoDB" name="job_backup" />
+			<entity schema="acompanhamentoDB" name="status_backup" />
+			<entity schema="acompanhamentoDB" name="sw_backup" />
+			<entity schema="acompanhamentoDB" name="tipo_backup" />
+			<entity schema="acompanhamentoDB" name="midia" />
+		</group>
+		<group name="Servidores" color="C4E0F9" >
+			<entity schema="acompanhamentoDB" name="notas_servidores" />
+			<entity schema="acompanhamentoDB" name="servidores" />
+			<entity schema="acompanhamentoDB" name="sistema_op" />
+			<entity schema="acompanhamentoDB" name="fabricante" />
+		</group>
+		<group name="Painel" color="001A80" >
+			<entity schema="acompanhamentoDB" name="avisos_relatorio" />
+			<entity schema="acompanhamentoDB" name="painel_item_topico" />
+			<entity schema="acompanhamentoDB" name="item_topico" />
+			<entity schema="acompanhamentoDB" name="topico" />
+			<entity schema="acompanhamentoDB" name="status_item" />
+			<entity schema="acompanhamentoDB" name="painel_topico" />
+			<entity schema="acompanhamentoDB" name="painel" />
+		</group>
+		<group name="Dados Cooperativa" color="1A4D4D" >
+			<entity schema="acompanhamentoDB" name="cargos" />
+			<entity schema="acompanhamentoDB" name="cidades" />
+			<entity schema="acompanhamentoDB" name="pa" />
+			<entity schema="acompanhamentoDB" name="equipe_cooperativa" />
+			<entity schema="acompanhamentoDB" name="dominio_internet" />
+			<entity schema="acompanhamentoDB" name="contrato" />
+			<entity schema="acompanhamentoDB" name="cooperativa" />
+		</group>
+	</layout>
+	<layout name="~Layout with Sample Tools" id="Layout-25ff" show_column_type="y" show_relation="columns" >
+		<entity schema="acompanhamentoDB" name="cargos" color="BED3F4" x="944" y="272" />
+		<entity schema="acompanhamentoDB" name="cidades" color="BED3F4" x="400" y="272" />
+		<entity schema="acompanhamentoDB" name="contrato" color="BED3F4" x="48" y="48" />
+		<entity schema="acompanhamentoDB" name="cooperativa" color="BED3F4" x="400" y="48" />
+		<entity schema="acompanhamentoDB" name="equipe_cooperativa" color="BED3F4" x="672" y="272" />
+		<entity schema="acompanhamentoDB" name="firewall_interfaces" color="C7F4BE" x="1536" y="48" />
+		<entity schema="acompanhamentoDB" name="firewall_modelo" color="C7F4BE" x="1248" y="240" />
+		<entity schema="acompanhamentoDB" name="firewall_pa" color="C7F4BE" x="1248" y="48" />
+		<entity schema="acompanhamentoDB" name="pa" color="BED3F4" x="672" y="48" />
+		<entity schema="acompanhamentoDB" name="usuarios_ic" color="BED3F4" x="128" y="272" />
+		<script name="SQL Editor" id="Editor-1b8c" language="SQL" >
+			<string><![CDATA[SELECT id, nome, id_cidade, ic, id_responsavel
+FROM
+	`acompanhamentoDB`.cooperativa a;]]></string>
+		</script>
+		<browser id="Browse-71c" name="Relational Data Explorer" confirm_updates="y" >
+			<browse_table schema="acompanhamentoDB" entity="cooperativa" x="20" y="20" width="400" height="300" >
+				<browse_table schema="acompanhamentoDB" entity="contrato" fk="fk_contrato_cooperativa" x="440" y="20" width="500" height="350" />
+			</browse_table>
+		</browser>
+		<query id="Query-6ea" name="Query Builder" >
+			<query_table schema="acompanhamentoDB" name="cooperativa" alias="c" x="48" y="48" >
+				<column name="id" />
+				<column name="nome" />
+				<column name="id_cidade" />
+				<column name="ic" />
+				<column name="id_responsavel_ic" />
+				<query_table schema="acompanhamentoDB" name="contrato" alias="c1" x="256" y="48" fk="fk_contrato_cooperativa" type="Inner Join" >
+					<column name="id_coop" />
+					<column name="adesao" />
+					<column name="rescisao" />
+					<column name="status" />
+				</query_table>
+			</query_table>
+		</query>
+		<form name="Report" id="Report-da1" template="Page" css="container-fluid" view="frame" >
+			<var name="samplePageNumber" type="4" value="0" mandatory="n" />
+			<var name="sampleRecordsPerPage" type="4" value="100" mandatory="n" />
+			<body name="Body" template="Grid" pos="0,0,0,0,f,f" layout="{{-2,-2,-2,-2,-1},{-2,-2,-2,-2}}" scroll="n" html="n" >
+				<cell type="label" name="Cooperativa Data" template="H3" pos="0,0,1,0,l,c" />
+				<cell type="chart" name="Pie" template="Pie" pos="0,1,4,1,l,c" max_records="20" >
+					<form_script type="DataSource" language="SQL" >
+						<var name="id" type="1" />
+						<var name="nome" type="-1" />
+						<var name="id_cidade" type="4" />
+						<var name="ic" type="-6" />
+						<var name="id_responsavel" type="4" />
+						<script ><![CDATA[SELECT * FROM `acompanhamentoDB`.cooperativa]]></script>
+					</form_script>
+					<param name="i0" value="nome" />
+					<param name="width" value="100%" />
+					<param name="v0" value="ic" />
+					<param name="title" value="Sample Chart" />
+					<param name="height" value="400px" />
+				</cell>
+				<tableview name="sample" template="Table" css="table table-striped table-sm table-hover" pos="0,2,4,2,f,f" layout="{{-2,-2,-2,-2,-2,-2},{-2,-2}}" scroll="n" html="n" header_rows="1" >
+					<form_script type="DataSource" language="SQL" >
+						<var name="id" type="1" />
+						<var name="nome" type="-1" />
+						<var name="id_cidade" type="4" />
+						<var name="ic" type="-6" />
+						<var name="id_responsavel" type="4" />
+						<script ><![CDATA[SELECT * FROM `acompanhamentoDB`.cooperativa]]></script>
+					</form_script>
+					<cell type="label" name="id" pos="0,0,0,0,c,c" />
+					<cell type="label" name="nome" pos="1,0,1,0,c,c" />
+					<cell type="label" name="id_cidade" pos="2,0,2,0,c,c" />
+					<cell type="label" name="ic" pos="3,0,3,0,c,c" />
+					<cell type="label" name="id_responsavel" pos="4,0,4,0,c,c" />
+					<cell type="label" name="Button can open other pages." pos="5,0,5,0,c,c" />
+					<cell type="label" name="${id}" template="Plain" pos="0,1,0,1,l,c" />
+					<cell type="label" name="${nome}" template="Plain" pos="1,1,1,1,l,c" />
+					<cell type="label" name="${id_cidade}" template="Plain" pos="2,1,2,1,l,c" />
+					<cell type="label" name="${ic}" template="Plain" pos="3,1,3,1,l,c" />
+					<cell type="label" name="${id_responsavel}" template="Plain" pos="4,1,4,1,l,c" />
+					<cell type="button" name="More" template="Plain" css="btn btn-default btn-success" pos="5,1,5,1,c,c" ref_id="Report-da1" />
+				</tableview>
+				<cell type="href" name="" disabled="${samplePageNumber&lt;1}" pos="0,3,0,3,l,c" glyph="FA-ANGLE_DOUBLE_LEFT" ref_id="Report-da1" >
+					<var name="samplePageNumber" value="0" />
+				</cell>
+				<cell type="href" name="" disabled="${samplePageNumber&lt;1}" pos="1,3,1,3,l,c" glyph="FA-ANGLE_LEFT" ref_id="Report-da1" >
+					<var name="samplePageNumber" value="${Math.max(0,samplePageNumber-1)}" />
+				</cell>
+				<cell type="label" name="Page ${samplePageNumber+1}" pos="2,3,2,3,l,c" />
+				<cell type="href" name="" disabled="${!sampleHasNextPage}" pos="3,3,3,3,l,c" glyph="FA-ANGLE_RIGHT" ref_id="Report-da1" >
+					<var name="samplePageNumber" value="${( samplePageNumber+1 )}" />
+				</cell>
+			</body>
+		</form>
+	</layout>
+</project>
