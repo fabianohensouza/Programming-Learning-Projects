@@ -38,11 +38,11 @@ class ArquivosList extends Page
         parent::__construct();
 
         $this->connection   = 'Sisac';
-        $this->activeRecord = 'Aplicacao';
+        $this->activeRecord = 'FileServer';
         
         // instancia um formulário
-        $this->form = new FormWrapper(new Form('form_aplicacoes'));
-        $this->form->setTitle('Aplicacoes adicionais');
+        $this->form = new FormWrapper(new Form('form_file_server'));
+        $this->form->setTitle('Servidor de Arquivos');
         
         // cria os campos do formulário
         $cooperativas   = new Combo('id_coop');
@@ -69,29 +69,23 @@ class ArquivosList extends Page
         $this->form->addAction('Buscar', new Action(array($this, 'onReload')));
 
         $action = new Action(array("CoopToForm", 'onEdit'));
-        $action->setParameter('form', 'AplicacoesForm');
+        $action->setParameter('form', 'ArquivosForm');
         $this->form->addAction('Novo', $action);
         
         // instancia a Datagrid
         $this->datagrid = new DatagridWrapper(new Datagrid);
 
         // instancia as colunas da Datagrid
-        $id_coop        = new DatagridColumn('id_coop',   'Cooperativa',   'center', '10%');
-        $nome           = new DatagridColumn('nome',     'Nome', 'center', '20%');
-        $desenvolvedor  = new DatagridColumn('desenvolvedor',     'Desenvolvedor', 'center', '20%');
-        $endereco       = new DatagridColumn('endereco',     'Endereço', 'center', '20%');
-        $id_tipo        = new DatagridColumn('id_tipo', 'Hospedagem', 'center', '20%');
-        $id_servidor    = new DatagridColumn('id_servidor', 'Servidor', 'center', '10%');
+        $id_coop        = new DatagridColumn('id_coop',   'Cooperativa',   'center', '30%');
+        $id_tipo            = new DatagridColumn('id_tipo ',     'Tipo ', 'center', '40%');
+        $id_servidor   = new DatagridColumn('id_servidor ',     'Servidor ', 'center', '40%');
 
         // adiciona as colunas à Datagrid
         $this->datagrid->addColumn($id_coop);
-        $this->datagrid->addColumn($nome);
-        $this->datagrid->addColumn($desenvolvedor);
-        $this->datagrid->addColumn($endereco);
-        $this->datagrid->addColumn($id_tipo);
-        $this->datagrid->addColumn($id_servidor);
+        $this->datagrid->addColumn($id_tipo );
+        $this->datagrid->addColumn($id_servidor );
 
-        $this->datagrid->addAction( 'Editar',  new Action(["AplicacoesForm", 'onEdit']),   'id', 'fa fa-edit fa-lg blue');
+        $this->datagrid->addAction( 'Editar',  new Action(["ArquivosForm", 'onEdit']),   'id', 'fa fa-edit fa-lg blue');
         $this->datagrid->addAction( 'Excluir', new Action([$this, 'onDelete']), 'id', 'fa fa-trash fa-lg red');
         
         // monta a página através de uma tabela

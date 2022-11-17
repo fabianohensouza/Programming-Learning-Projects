@@ -826,6 +826,7 @@
 			<entity schema="acompanhamentoDB" name="contrato" />
 			<entity schema="acompanhamentoDB" name="cooperativa" />
 		</group>
+		<script name="acompanhamentoDB.sql" id="Editor-1ea8" language="SQL" confirmed="y" file="file:/home/fabiano/Documents/MEGA/Projetos/Programming-Learning-Projects/PHP/Sistema%20de%20Acompanhamento/Database%20template/acompanhamentoDB.sql" />
 	</layout>
 	<layout name="~Layout with Sample Tools" id="Layout-25ff" show_column_type="y" show_relation="columns" >
 		<entity schema="acompanhamentoDB" name="cargos" color="BED3F4" x="944" y="272" />
