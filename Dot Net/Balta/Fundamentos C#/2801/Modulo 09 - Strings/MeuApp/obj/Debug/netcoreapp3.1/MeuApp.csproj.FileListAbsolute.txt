@@ -1,0 +1,14 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\bin\Debug\netcoreapp3.1\MeuApp.exe
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\bin\Debug\netcoreapp3.1\MeuApp.deps.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\bin\Debug\netcoreapp3.1\MeuApp.runtimeconfig.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\bin\Debug\netcoreapp3.1\MeuApp.runtimeconfig.dev.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\bin\Debug\netcoreapp3.1\MeuApp.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\bin\Debug\netcoreapp3.1\MeuApp.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\obj\Debug\netcoreapp3.1\MeuApp.csproj.AssemblyReference.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\obj\Debug\netcoreapp3.1\MeuApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\obj\Debug\netcoreapp3.1\MeuApp.AssemblyInfoInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\obj\Debug\netcoreapp3.1\MeuApp.AssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\obj\Debug\netcoreapp3.1\MeuApp.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\obj\Debug\netcoreapp3.1\MeuApp.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\obj\Debug\netcoreapp3.1\MeuApp.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 09 - Strings\MeuApp\obj\Debug\netcoreapp3.1\MeuApp.genruntimeconfig.cache
