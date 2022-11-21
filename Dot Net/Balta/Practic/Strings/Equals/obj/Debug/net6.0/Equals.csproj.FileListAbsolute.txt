@@ -1,0 +1,15 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\bin\Debug\net6.0\Equals.exe
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\bin\Debug\net6.0\Equals.deps.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\bin\Debug\net6.0\Equals.runtimeconfig.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\bin\Debug\net6.0\Equals.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\bin\Debug\net6.0\Equals.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\obj\Debug\net6.0\Equals.csproj.AssemblyReference.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\obj\Debug\net6.0\Equals.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\obj\Debug\net6.0\Equals.AssemblyInfoInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\obj\Debug\net6.0\Equals.AssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\obj\Debug\net6.0\Equals.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\obj\Debug\net6.0\Equals.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\obj\Debug\net6.0\refint\Equals.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\obj\Debug\net6.0\Equals.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\obj\Debug\net6.0\Equals.genruntimeconfig.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Equals\obj\Debug\net6.0\ref\Equals.dll

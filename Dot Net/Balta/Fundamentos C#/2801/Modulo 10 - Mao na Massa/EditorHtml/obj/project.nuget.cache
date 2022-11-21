@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "s2XrbSnqIV0/0ZDwYEEp3Ztbd/D21q1GgDiSemD6apO8w8xr10F5uskD8nDzF6fz+nzhCwcb/MvL8oI6sVcFZQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\Fundamentos C#\\2801\\Modulo 10 - Mao na Massa\\EditorHtml\\EditorHtml.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fabiano\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Fabiano\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\Fabiano\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\Fabiano\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.31\\microsoft.netcore.app.host.win-x64.3.1.31.nupkg.sha512"
+  ],
+  "logs": []
+}

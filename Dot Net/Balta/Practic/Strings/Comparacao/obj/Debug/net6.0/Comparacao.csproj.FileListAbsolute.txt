@@ -1,0 +1,15 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\bin\Debug\net6.0\Comparacao.exe
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\bin\Debug\net6.0\Comparacao.deps.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\bin\Debug\net6.0\Comparacao.runtimeconfig.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\bin\Debug\net6.0\Comparacao.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\bin\Debug\net6.0\Comparacao.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\obj\Debug\net6.0\Comparacao.csproj.AssemblyReference.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\obj\Debug\net6.0\Comparacao.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\obj\Debug\net6.0\Comparacao.AssemblyInfoInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\obj\Debug\net6.0\Comparacao.AssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\obj\Debug\net6.0\Comparacao.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\obj\Debug\net6.0\Comparacao.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\obj\Debug\net6.0\refint\Comparacao.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\obj\Debug\net6.0\Comparacao.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\obj\Debug\net6.0\Comparacao.genruntimeconfig.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Comparacao\obj\Debug\net6.0\ref\Comparacao.dll

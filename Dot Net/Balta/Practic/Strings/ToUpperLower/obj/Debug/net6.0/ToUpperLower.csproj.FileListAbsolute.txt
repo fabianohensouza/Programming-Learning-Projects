@@ -1,0 +1,15 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\bin\Debug\net6.0\ToUpperLower.exe
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\bin\Debug\net6.0\ToUpperLower.deps.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\bin\Debug\net6.0\ToUpperLower.runtimeconfig.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\bin\Debug\net6.0\ToUpperLower.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\bin\Debug\net6.0\ToUpperLower.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\obj\Debug\net6.0\ToUpperLower.csproj.AssemblyReference.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\obj\Debug\net6.0\ToUpperLower.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\obj\Debug\net6.0\ToUpperLower.AssemblyInfoInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\obj\Debug\net6.0\ToUpperLower.AssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\obj\Debug\net6.0\ToUpperLower.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\obj\Debug\net6.0\ToUpperLower.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\obj\Debug\net6.0\refint\ToUpperLower.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\obj\Debug\net6.0\ToUpperLower.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\obj\Debug\net6.0\ToUpperLower.genruntimeconfig.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\ToUpperLower\obj\Debug\net6.0\ref\ToUpperLower.dll

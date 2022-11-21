@@ -1,0 +1,15 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\bin\Debug\net6.0\Indices.exe
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\bin\Debug\net6.0\Indices.deps.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\bin\Debug\net6.0\Indices.runtimeconfig.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\bin\Debug\net6.0\Indices.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\bin\Debug\net6.0\Indices.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\obj\Debug\net6.0\Indices.csproj.AssemblyReference.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\obj\Debug\net6.0\Indices.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\obj\Debug\net6.0\Indices.AssemblyInfoInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\obj\Debug\net6.0\Indices.AssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\obj\Debug\net6.0\Indices.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\obj\Debug\net6.0\Indices.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\obj\Debug\net6.0\refint\Indices.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\obj\Debug\net6.0\Indices.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\obj\Debug\net6.0\Indices.genruntimeconfig.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\Indices\obj\Debug\net6.0\ref\Indices.dll

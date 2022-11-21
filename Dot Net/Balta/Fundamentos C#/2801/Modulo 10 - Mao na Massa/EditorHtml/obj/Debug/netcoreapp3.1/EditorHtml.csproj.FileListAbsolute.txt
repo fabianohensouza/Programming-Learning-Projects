@@ -1,0 +1,14 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\bin\Debug\netcoreapp3.1\EditorHtml.exe
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\bin\Debug\netcoreapp3.1\EditorHtml.deps.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\bin\Debug\netcoreapp3.1\EditorHtml.runtimeconfig.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\bin\Debug\netcoreapp3.1\EditorHtml.runtimeconfig.dev.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\bin\Debug\netcoreapp3.1\EditorHtml.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\bin\Debug\netcoreapp3.1\EditorHtml.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\obj\Debug\netcoreapp3.1\EditorHtml.csproj.AssemblyReference.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\obj\Debug\netcoreapp3.1\EditorHtml.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\obj\Debug\netcoreapp3.1\EditorHtml.AssemblyInfoInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\obj\Debug\netcoreapp3.1\EditorHtml.AssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\obj\Debug\netcoreapp3.1\EditorHtml.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\obj\Debug\netcoreapp3.1\EditorHtml.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\obj\Debug\netcoreapp3.1\EditorHtml.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Fundamentos C#\2801\Modulo 10 - Mao na Massa\EditorHtml\obj\Debug\netcoreapp3.1\EditorHtml.genruntimeconfig.cache

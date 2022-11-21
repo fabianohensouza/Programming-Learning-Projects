@@ -1,0 +1,15 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\bin\Debug\net6.0\StartsEndWith.exe
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\bin\Debug\net6.0\StartsEndWith.deps.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\bin\Debug\net6.0\StartsEndWith.runtimeconfig.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\bin\Debug\net6.0\StartsEndWith.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\bin\Debug\net6.0\StartsEndWith.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\obj\Debug\net6.0\StartsEndWith.csproj.AssemblyReference.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\obj\Debug\net6.0\StartsEndWith.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\obj\Debug\net6.0\StartsEndWith.AssemblyInfoInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\obj\Debug\net6.0\StartsEndWith.AssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\obj\Debug\net6.0\StartsEndWith.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\obj\Debug\net6.0\StartsEndWith.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\obj\Debug\net6.0\refint\StartsEndWith.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\obj\Debug\net6.0\StartsEndWith.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\obj\Debug\net6.0\StartsEndWith.genruntimeconfig.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Strings\StartsEndWith\obj\Debug\net6.0\ref\StartsEndWith.dll
