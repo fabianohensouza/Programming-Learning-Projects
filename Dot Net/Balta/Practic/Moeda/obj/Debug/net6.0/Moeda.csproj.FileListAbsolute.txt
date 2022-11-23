@@ -1,0 +1,15 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\bin\Debug\net6.0\Moeda.exe
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\bin\Debug\net6.0\Moeda.deps.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\bin\Debug\net6.0\Moeda.runtimeconfig.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\bin\Debug\net6.0\Moeda.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\bin\Debug\net6.0\Moeda.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\obj\Debug\net6.0\Moeda.csproj.AssemblyReference.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\obj\Debug\net6.0\Moeda.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\obj\Debug\net6.0\Moeda.AssemblyInfoInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\obj\Debug\net6.0\Moeda.AssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\obj\Debug\net6.0\Moeda.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\obj\Debug\net6.0\Moeda.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\obj\Debug\net6.0\refint\Moeda.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\obj\Debug\net6.0\Moeda.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\obj\Debug\net6.0\Moeda.genruntimeconfig.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\Practic\Moeda\obj\Debug\net6.0\ref\Moeda.dll
