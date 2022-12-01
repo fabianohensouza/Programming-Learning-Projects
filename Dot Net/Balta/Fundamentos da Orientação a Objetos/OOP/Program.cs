@@ -10,7 +10,7 @@ namespace OOP
         }
     }
 
-    class Payment
+    class Payment : IDisposable
     {
         DateTime Vencimento;
 
@@ -33,5 +33,10 @@ namespace OOP
 
         void Pay()
         { }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
