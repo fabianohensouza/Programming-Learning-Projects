@@ -6,12 +6,14 @@ namespace Balta.ContentContext
     {
 
         public Guid Id { get; set; }
-        public string? Title { get; set; }
-        public string? Url { get; set; }
+        public string Title { get; set; }
+        public string Url { get; set; }
 
-        public Content()
+        public Content(string title, string url)
         {
             Id = Guid.NewGuid();
+            Title = title;
+            Url = url;
         }
 
     }

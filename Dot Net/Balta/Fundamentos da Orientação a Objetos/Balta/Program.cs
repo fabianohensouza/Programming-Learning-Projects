@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Balta.ContentContext;
 
 namespace Balta
@@ -7,9 +9,63 @@ namespace Balta
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.Clear();
 
-            var course = new Course();
+            var articles = new List<Article>();
+            articles.Add(new Article("Artigo OOP", "article/orientacao-obj"));
+            articles.Add(new Article("Artigo C#", "article/csharp"));
+            articles.Add(new Article("Artigo ASP.NET#", "article/aspnet"));
+
+            foreach (var article in articles)
+            {
+                Console.WriteLine(article.Id);
+                Console.WriteLine(article.Title);
+                Console.WriteLine(article.Url);
+                Console.WriteLine("----------------");
+            }
+
+            Console.WriteLine("####################");
+
+            var coursesDotNet = new List<Course>();
+            var coursesAngular = new List<Course>();
+
+            var courseOOP = new Course("Fundamentos OOP", "couse/fundamentos-oop");
+            var courseCsharp = new Course("Fundamentos C#", "couse/fundamentos-csharp");
+            var courseAspNet = new Course("Fundamentos ASP.NET", "couse/fundamentos-aspnet");
+            var courseJS = new Course("Fundamentos JS", "couse/fundamentos-js");
+            var courseAngular = new Course("Fundamentos Angular", "couse/fundamentos-angular");
+
+            coursesDotNet.Add(courseOOP);
+            coursesDotNet.Add(courseCsharp);
+            coursesDotNet.Add(courseAspNet);
+            coursesAngular.Add(courseJS);
+            coursesAngular.Add(courseAngular);
+
+            var careers = new List<Career>();
+            var careerDotNet = new Career("Especialista .NET", "carrer/especialista-dotnet");
+            var careerItem = new CareerItem(2, "Aprenda .NET", "", null);
+            careerDotNet.Items.Add(careerItem);
+            careerItem = new CareerItem(1, "Comece .NET por aqui", "", null);
+            careerDotNet.Items.Add(careerItem);
+
+            var careerAngular = new Career("Especialista Angular", "carrer/especialista-angular");
+            careerItem = new CareerItem(1, "Aprenda Angular", "", null);
+            careerAngular.Items.Add(careerItem);
+
+            careers.Add(careerDotNet);
+            careers.Add(careerAngular);
+
+            foreach (var career in careers)
+            {
+                Console.WriteLine(career.Title);
+
+                foreach (var item in career.Items.OrderBy(x => x.Order)) //Ordering the list
+                {
+                    Console.WriteLine($"{item.Order} - {item.Title}");
+                }
+
+                Console.WriteLine("----------------");
+            }
 
         }
     }
