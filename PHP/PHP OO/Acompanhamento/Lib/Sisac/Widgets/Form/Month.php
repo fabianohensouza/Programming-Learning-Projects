@@ -4,11 +4,11 @@ namespace Sisac\Widgets\Form;
 use Sisac\Widgets\Base\Element;
 
 /**
- * classe Date
+ * classe Month
  * classe para construção de caixas de texto
- * @author Pablo Dall'Oglio
+ * @author Fabiano Souza
  */
-class Date extends Entry implements FormElementInterface
+class Month extends Entry implements FormElementInterface
 {
     /**
      * Exibe o widget na tela
@@ -19,7 +19,7 @@ class Date extends Entry implements FormElementInterface
         $tag->class = 'field';		  // classe CSS
         $tag->name = $this->name;     // nome da TAG
         $tag->value = $this->value;   // valor da TAG
-        $tag->type = 'date';          // tipo de input
+        $tag->type = 'month';          // tipo de input
         $tag->style = "width:{$this->size}"; // tamanho em pixels
         
         // se o campo não é editável
