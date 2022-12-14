@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Balta.ContentContext;
 using Balta.ContentContext.Enums;
+using Balta.SubscriptionContext;
 
 namespace Balta
 {
@@ -73,6 +74,12 @@ namespace Balta
 
                 Console.WriteLine("----------------");
             }
+
+            var payPalSubscription = new PayPalSubscription();
+            var pagarmeSubscription = new PagarmeSubscription();
+            var student = new Student();
+            student.CreateSubscription(payPalSubscription);
+            student.CreateSubscription(pagarmeSubscription);
 
         }
     }

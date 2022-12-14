@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Balta.NotificationContext;
+using Balta.SharedContext;
 
 namespace Balta.ContentContext
 

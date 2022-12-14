@@ -1,4 +1,5 @@
 using System;
+using Balta.SharedContext;
 
 namespace Balta.ContentContext
 {
