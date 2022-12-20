@@ -5,6 +5,8 @@ use Sisac\Database\Criteria;
 use Sisac\Widgets\Form\Form;
 use Sisac\Widgets\Form\Combo;
 use Sisac\Widgets\Form\Entry;
+use Sisac\Widgets\Form\Label;
+use Sisac\Widgets\Form\Month;
 use Sisac\Database\Repository;
 use Sisac\Widgets\Form\Hidden;
 use Sisac\Widgets\Form\Number;
@@ -12,8 +14,8 @@ use Sisac\Database\Transaction;
 use Sisac\Widgets\Base\Element;
 use Sisac\Widgets\Dialog\Message;
 use Sisac\Widgets\Container\Panel;
+use Sisac\Widgets\Dialog\Question;
 use Sisac\Widgets\Form\CheckGroup;
-use Sisac\Widgets\Form\Month;
 use Sisac\Widgets\Wrapper\FormWrapper;
 
 /**
@@ -34,56 +36,63 @@ class RelatorioForm extends Page
         $this->form = new FormWrapper(new Form('form_gera_relat'));
         $this->form->setTitle('Gerar Relatório de Acompanhamento');
         
+        // carrega as informações do banco de dados
+        Transaction::open('Sisac');
+        
         // cria os campos do formulário
         $periodo      = new Month('periodo');
+        $this->form->addField('Período', $periodo, '30%');  
 
-        for ($i=1; $i <= 8; $i++) { 
-            $cooperativa    = new Combo('id_coop');
-        }
-        
-        // carrega as cooperativas do banco de dados
-        Transaction::open('Sisac');   
-
-        $avisos = AvisosRelat::all();
-        echo '<pre>';
-        var_dump($avisos);exit;
+        $cooperativa = new Combo('cooperativa');
 
         $cooperativas = Cooperativa::all();
-        $items = array();
+        $items = array( 0 => '*** Todas Cooperativas ***');
         foreach ($cooperativas as $obj_cooperativa) {
             $items[$obj_cooperativa->id] = $obj_cooperativa->id . " - " . $obj_cooperativa->nome;
         }
         unset( $items['0000']);
-        $cooperativa->addItems($items);    
+        $cooperativa->addItems($items); 
         
-        $cargos = Cargo::all();
-        $items = array();
-        foreach ($cargos as $cargo) {
-            $items[$cargo->cod] = $cargo->nome;
-        }
-        $cod_cargo->addItems($items);
+        $this->form->addField('Cooperativa', $cooperativa, '30%');
+
+        $aviso = new Hidden('aviso');
+        $this->form->addField('Avisos:', $aviso, '50%');
+
+        for ($i=1; $i <= 8; $i++) {
+            $av = "av{$i}";
+
+            $$av = new Entry($av); 
+            $this->form->addField("$i", $$av, '50%');;
+        }    
 
         Transaction::close();
         
-        $this->form->addField('', $id, '15%');
-        $this->form->addField('Nome', $nome, '50%');
-        $this->form->addField('Cooperativa', $cooperativa, '50%');
-        $this->form->addField('Cargo', $cod_cargo, '50%');
-        $this->form->addField('E-mail', $email, '50%');
-        
-        $this->form->addAction('Salvar', new Action(array($this, 'onSave')));
+        $this->form->addAction('Gerar', new Action(array($this, 'onSave')));
                 
         // adiciona o formulário na página
         parent::add($this->form);
+    }
+    
+    /**
+     * Pergunta sobre a exclusão de registro
+     */
+    function onSave($param)
+    {
+        $action1 = new Action(array($this, 'Save'));
+        
+        new Question('Esta operação irá sobescrever o relatória da Cooperativa seleccionada. Deseja prosseguir?', $action1);
     }
 
     /**
      * Salva os dados do formulário
      */
-    public function onSave()
+    public function Save()
     {
         try
         {
+        echo '<pre>';
+        var_dump($this->form->getData());
+        echo '</pre>';exit;
             // inicia transação com o BD
             Transaction::open('Sisac');
 
@@ -113,14 +122,10 @@ class RelatorioForm extends Page
     {
         try
         {
-            if (isset($param['id']))
-            {
-                $id = $param['id']; // obtém a chave
-                Transaction::open('Sisac'); // inicia transação com o BD
-                $pessoa = Pessoa::find($id);
-                $this->form->setData($pessoa); // lança os dados da pessoa no formulário
-                Transaction::close(); // finaliza a transação
-            }
+            Transaction::open('Sisac'); // inicia transação com o BD
+            $aviso = AvisosRelat::all();
+            $this->form->setData($aviso); // lança os dados da pessoa no formulário
+            Transaction::close(); // finaliza a transação
         }
         catch (Exception $e)		    // em caso de exceção
         {
