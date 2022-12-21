@@ -11,6 +11,7 @@ use Sisac\Database\Repository;
 use Sisac\Widgets\Form\Hidden;
 use Sisac\Widgets\Form\Number;
 use Sisac\Database\Transaction;
+use Sisac\Session\Session;
 use Sisac\Widgets\Base\Element;
 use Sisac\Widgets\Dialog\Message;
 use Sisac\Widgets\Container\Panel;
@@ -76,8 +77,15 @@ class RelatorioForm extends Page
     /**
      * Pergunta sobre a exclusão de registro
      */
-    function onSave($param)
+    function onSave()
     {
+
+        $dados = $this->form->getData();
+        $this->form->setData($dados);
+
+        $session = new Session();
+        $session->setValue('dados', $dados); 
+
         $action1 = new Action(array($this, 'Save'));
         
         new Question('Esta operação irá sobescrever o relatória da Cooperativa seleccionada. Deseja prosseguir?', $action1);
@@ -90,13 +98,13 @@ class RelatorioForm extends Page
     {
         try
         {
-        echo '<pre>';
-        var_dump($this->form->getData());
-        echo '</pre>';exit;
+            $session = new Session();
+            $dados = $session->getValue('dados');
+            $session->freeSession();
+
             // inicia transação com o BD
             Transaction::open('Sisac');
 
-            $dados = $this->form->getData();
             $this->form->setData($dados); 
             $pessoa = new Pessoa; // instancia objeto
             $pessoa->fromArray( (array) $dados); // carrega os dados
