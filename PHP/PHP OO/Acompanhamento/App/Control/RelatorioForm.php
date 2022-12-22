@@ -58,13 +58,15 @@ class RelatorioForm extends Page
 
         $aviso = new Hidden('aviso');
         $this->form->addField('Avisos:', $aviso, '50%');
+        $avisos_relat = AvisosRelat::find(1);
 
         for ($i=1; $i <= 8; $i++) {
             $av = "av{$i}";
 
-            $$av = new Entry($av); 
-            $this->form->addField("$i", $$av, '50%');;
-        }    
+            $$av = new Entry($av);
+            $$av->setValue($avisos_relat->$av);
+            $this->form->addField("$i", $$av, '50%');
+        }
 
         Transaction::close();
         
@@ -101,17 +103,23 @@ class RelatorioForm extends Page
             $session = new Session();
             $dados = $session->getValue('dados');
             $session->freeSession();
+            $this->form->setData($dados);
+
+            $avisos = ['id' => 1];
+            for ($i=1; $i <= 8; $i++) {
+                $av = "av{$i}";                
+                $avisos[$av] = $dados->$av;
+            }    
 
             // inicia transação com o BD
             Transaction::open('Sisac');
-
-            $this->form->setData($dados); 
-            $pessoa = new Pessoa; // instancia objeto
-            $pessoa->fromArray( (array) $dados); // carrega os dados
-            $pessoa->store(); // armazena o objeto no banco de dados
+ 
+            $avisos_relat = new AvisosRelat(); // instancia objeto
+            $avisos_relat->fromArray($avisos); // carrega os dados
+            $avisos_relat->store(); // armazena o objeto no banco de dados
             
             Transaction::close(); // finaliza a transação
-            new Message('info', 'Dados armazenados com sucesso');
+            new Message('info', 'Relatório gerado com sucesso!');
         }
         catch (Exception $e)
         {
@@ -131,8 +139,8 @@ class RelatorioForm extends Page
         try
         {
             Transaction::open('Sisac'); // inicia transação com o BD
-            $aviso = AvisosRelat::all();
-            $this->form->setData($aviso); // lança os dados da pessoa no formulário
+            $avisos_relat = AvisosRelat::find(1);
+            $this->form->setData($avisos_relat); // lança os dados da pessoa no formulário
             Transaction::close(); // finaliza a transação
         }
         catch (Exception $e)		    // em caso de exceção
