@@ -132,9 +132,9 @@ class RelatorioForm extends Page
     }
     
     /**
-     * Carrega registro para edição
+     * Carrega daos do acompanhameto das Cooperativas
      */
-    public function onEdit($param)
+    public function loadAcpmt($coop)
     {
         try
         {

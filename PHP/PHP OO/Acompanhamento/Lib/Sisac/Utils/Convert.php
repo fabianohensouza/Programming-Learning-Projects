@@ -14,4 +14,28 @@ class Convert
     {
         return date('d/m/Y',strtotime($date));
     }
+
+    public static function monthName(int $month)
+    {
+        if ($month < 1 || $month >12 ){
+            return false;
+        }
+
+        $month_name = array(
+            'Janeiro',
+            'Fevereiro',
+            'Março',
+            'Abril',
+            'Maio',
+            'Junho',
+            'Julho',
+            'Agosto',
+            'Setembro',
+            'Outubro',
+            'Novembro',
+            'Dezembro'
+        );
+
+        return $month_name[$month];
+    }
 }
