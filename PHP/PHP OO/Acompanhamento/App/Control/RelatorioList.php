@@ -52,16 +52,17 @@ class RelatorioList extends Page
         Transaction::open('Sisac');
 
         $repository = new Repository('Cooperativa');
-        $criteria = new Criteria;
-        $criteria->add('id', '!=', '0000');
+        $criteria = new Criteria();
         $criteria->setProperty('order', 'id');
-        $lista_coop = $repository->load($criteria);
+        $criteria->add('ic', '=', 'Sim');
+        $this->cooperativas = $repository->load($criteria);
         $items = array();
 
-        foreach ($lista_coop as $obj_cooperativas)
+        foreach ($this->cooperativas as $obj_cooperativas)
         {
             $items[$obj_cooperativas->id] = $obj_cooperativas->id . " - " . $obj_cooperativas->nome;
         }        
+        
         $cooperativas->addItems($items);
 
         Transaction::close();
