@@ -2,21 +2,16 @@
 use Sisac\Control\Page;
 use Sisac\Control\Action;
 use Sisac\Database\Criteria;
+use Sisac\Database\Repository;
+use Sisac\Database\Transaction;
+use Sisac\Session\Session;
+use Sisac\Widgets\Dialog\Message;
+use Sisac\Widgets\Dialog\Question;
 use Sisac\Widgets\Form\Form;
 use Sisac\Widgets\Form\Combo;
 use Sisac\Widgets\Form\Entry;
-use Sisac\Widgets\Form\Label;
 use Sisac\Widgets\Form\Month;
-use Sisac\Database\Repository;
 use Sisac\Widgets\Form\Hidden;
-use Sisac\Widgets\Form\Number;
-use Sisac\Database\Transaction;
-use Sisac\Session\Session;
-use Sisac\Widgets\Base\Element;
-use Sisac\Widgets\Dialog\Message;
-use Sisac\Widgets\Container\Panel;
-use Sisac\Widgets\Dialog\Question;
-use Sisac\Widgets\Form\CheckGroup;
 use Sisac\Widgets\Wrapper\FormWrapper;
 
 /**
@@ -25,7 +20,7 @@ use Sisac\Widgets\Wrapper\FormWrapper;
 class RelatorioForm extends Page
 {
     private $form;
-    private $cargos;
+    private $id_coops = [];
 
     /**
      * Construtor da página
@@ -49,11 +44,12 @@ class RelatorioForm extends Page
         $repository = new Repository('Cooperativa');
         $criteria = new Criteria();
         $criteria->add('ic', '=', 'Sim');
-        $this->cooperativas = $repository->load($criteria);
+        $cooperativas = $repository->load($criteria);
         $items = array( 0 => '*** Todas Cooperativas ***');
 
-        foreach ($this->cooperativas as $obj_cooperativa) {
+        foreach ($cooperativas as $obj_cooperativa) {
             $items[$obj_cooperativa->id] = $obj_cooperativa->id . " - " . $obj_cooperativa->nome;
+            $this->id_coops[] = $obj_cooperativa->id;
         }
 
         $cooperativa->addItems($items); 
@@ -120,7 +116,6 @@ class RelatorioForm extends Page
         {
             $session = new Session();
             $dados = $session->getValue('dados');
-            $session->freeSession();
             $this->form->setData($dados);
 
             $avisos = ['id' => 1];
@@ -137,11 +132,13 @@ class RelatorioForm extends Page
             $avisos_relat->store(); // armazena o objeto no banco de dados
 
             //gera dados das cooperativas
-            $coop = ($dados->cooperativa != '0')? $dados->cooperativa : '0';
-            $dados_acpmt = $this->loadAcpmt($coop, $avisos);
+            $coops = ($dados->cooperativa == '0')? $this->id_coops : array($dados->cooperativa);
+            $relatorio = new GeraRelatorio($coops, $avisos, $dados->periodo);
             
             Transaction::close(); // finaliza a transação
             new Message('info', 'Relatório gerado com sucesso!');
+            
+            $session->freeSession();
         }
         catch (Exception $e)
         {
@@ -153,79 +150,5 @@ class RelatorioForm extends Page
         }
     }
     
-    /**
-     * Carrega daos do acompanhameto das Cooperativas
-     */
-    public function loadAcpmt($coop,  $avisos)
-    {
-        try
-        {
-            $this->dados = array();
-
-            unset($avisos['id']);
-            $this->dados['avisos'] = $avisos;
-
-            Transaction::open('Sisac'); // inicia transação com o BD
-
-            if ($coop == '0') {
-                foreach ($this->cooperativas as $cooperativa) {
-                    $this->dados[$cooperativa->id] = $this->dadosCoop($cooperativa);
-                }
-            } else {
-                $cooperativa = Cooperativa::find($coop);
-                $this->dados[$cooperativa->id] = $this->dadosCoop($cooperativa);
-            }            
-
-            $this->dados['topicos'] = $this->dadosTopicos();
-            $this->dadosExpiracao();
-
-            //var_dump($dados, $dominio, $antivirus);exit;
-
-            Transaction::close(); // finaliza a transação
-        }
-        catch (Exception $e)		    // em caso de exceção
-        {
-            // exibe a mensagem gerada pela exceção
-            new Message('error', $e->getMessage());
-            // desfaz todas alterações no banco de dados
-            Transaction::rollback();
-        }
-    }
-
-    private function dadosCoop($coop) 
-    {
-        $dadosCoop['id'] = $coop->id;
-        $dadosCoop['nome'] = $coop->nome;
-        $dadosCoop['cidade'] = $coop->get_cidade();
-        return $dadosCoop;
-    }
-
-    private function dadosExpiracao() 
-    {        
-        $expira['dominio'] =  Dominio::all();
-        $expira['antivirus'] =  Antivirus::all();
-
-        var_dump($expira['dominio'], $expira['antivirus']);exit;
-        //return $dados;
-    }
-
-    private function dadosTopicos() 
-    {
-        $repository = new Repository('Topico');
-        $criteria = new Criteria();
-        $criteria->add('id_status', '=', 1);
-        $criteria->setProperty('order', 'ordem');
-        $topicos = $repository->load($criteria);
-        $lista_topicos = array();
-        foreach ($topicos as $topico) {
-            $lista_topicos[$topico->id]['id'] = $topico->id;
-            $lista_topicos[$topico->id]['nome'] = $topico->nome;
-            $lista_topicos[$topico->id]['descricao'] = $topico->descricao;
-            $lista_topicos[$topico->id]['conformidade'] = $topico->conformidade;
-            $lista_topicos[$topico->id]['ordem'] = $topico->ordem;
-            $lista_topicos[$topico->id]['pont_max'] = $topico->pont_max;
-        }
-
-        return $lista_topicos;
-    }
+    
 }
