@@ -1,4 +1,5 @@
 <?php
+use Sisac\Utils\Convert;
 use Sisac\Database\Record;
 
 class Servidor extends Record
@@ -8,6 +9,7 @@ class Servidor extends Record
     private $tipo;
     private $fabricante;
     private $sistema_op;
+    private $status_hw;
     
     public function getPa()
     {
@@ -47,5 +49,22 @@ class Servidor extends Record
         }
         
         return $this->sistema_op->nome;
+    }
+    
+    public function getStatusHw()
+    {
+        $status =  StatusHardware::find($this->id_status_hardware);
+        var_dump($status);
+        //return $status;
+    }
+    
+    public function getGarantia()
+    {
+        $today = date('Y-m-d');
+        $garantia = (!is_null($this->dt_garantia)) ? Convert::dateToPtBr($this->dt_garantia) : '00/00/0000';
+
+        if ($today > $this->dt_garantia) return "Garantia expirada {$garantia}";
+
+        return $garantia;
     }
 }

@@ -55,6 +55,7 @@ class ServidoresForm extends Page
             $nome      = new Entry('nome');
             $id_fabricante    = new Combo('id_fabricante');
             $modelo        = new Entry('modelo');
+            $serial      = new Entry('serial');
             $id_tipo  = new Combo('id_tipo');
             $id_sistema_op    = new Combo('id_sistema_op');
             $status_hardware     = new Combo('id_status_hardware');
@@ -106,6 +107,7 @@ class ServidoresForm extends Page
             $this->form->addField('Nome', $nome, '50%');
             $this->form->addField('Fabricante', $id_fabricante, '50%');
             $this->form->addField('Modelo', $modelo, '50%');
+            $this->form->addField('Número de Série', $serial, '50%');
             $this->form->addField('Tipo', $id_tipo, '20%');
             $this->form->addField('Sistema Operacional', $id_sistema_op, '50%');
             $this->form->addField('Garantia', $dt_garantia, '20%');

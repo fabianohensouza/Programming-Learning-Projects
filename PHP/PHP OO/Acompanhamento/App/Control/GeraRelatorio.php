@@ -35,16 +35,17 @@ class GeraRelatorio
                 $this->dados['coop'][$coop] = $this->dadosCoop($cooperativa);
                 $this->dados['coop'][$coop]['antivirus'] = $this->dadosAv($coop);
                 $this->dados['coop'][$coop]['dominio'] = $this->dadosDominio($coop);
+                $this->dados['coop'][$coop]['servidores'] = $this->dadosServidor($coop);
 
                 foreach ($this->dados['topicos'] as $key => $value) {
                     $this->dados['coop'][$coop]['ev_topicos'][$key] = $this->dadosEvTopico($coop, ['id_topico', '=', $key]);
-                    $this->dados['coop'][$coop]['ev_topicos'][$key]['itens'] = $this->dadosItens($coop);
+                    //$this->dados['coop'][$coop]['ev_topicos'][$key]['itens'] = $this->dadosItens($coop);
                 }
                 $this->dados['coop'][$coop]['ev_geral'] = $this->dadosEv($coop);
 
-                var_dump($this->dados['coop'][$coop]);exit;
+                //var_dump($this->dados['coop'][$coop]);exit;
             }
-            var_dump($this->dados);exit;    
+            var_dump($this->dados['coop']);exit;    
 
             Transaction::close(); // finaliza a transação
         }
@@ -114,7 +115,7 @@ class GeraRelatorio
         $dados = [];
         foreach ($this->carregaBDCoop($coop, 'Antivirus') as $value) {
             $dados['licencas'] = $value->licencas;
-            $dados['expiracao'] = Convert::dateToPtBr($value->expiracao);
+            $dados['expiracao'] = (!is_null($value->expiracao)) ? Convert::dateToPtBr($value->expiracao) : '-';
         }      
         return $dados;
     }
@@ -124,7 +125,7 @@ class GeraRelatorio
         $dados = [];
         foreach ($this->carregaBDCoop($coop, 'Dominio') as $value) {
             $dados['nome'] = $value->nome;
-            $dados['expiracao'] = Convert::dateToPtBr($value->expiracao);
+            $dados['expiracao'] = (!is_null($value->expiracao)) ? Convert::dateToPtBr($value->expiracao) : '-';
         }        
         return $dados;
     }
@@ -150,17 +151,23 @@ class GeraRelatorio
         $dados = [];
         foreach ($this->carregaBDCoop($coop, 'Servidor') as $value) {
             $dados['nome'] = $value->nome;
-            $dados['expiracao'] = Convert::dateToPtBr($value->expiracao);
+            $dados['so'] = $value->getSistOp();
+            $dados['fabricante'] = $value->getFabricante();
+            $dados['modelo'] = $value->nome;
+            $dados['serial'] = $value->serial;
+            $dados['tipo'] = $value->getTipoServidor();
+            $dados['status'] = $value->getStatusHw();
+            $dados['garantia'] = $value->getGarantia();
         }        
         return $dados;
     }
 
-    private function dadosItens($coop) 
+    private function dadosItens($coop, $itens) 
     {        
         $dados = [];
-        foreach ($this->carregaBDCoop($coop, 'Servidor') as $value) {
+        foreach ($this->carregaBDCoop($coop, 'CoopItemStatus') as $value) {
             $dados['nome'] = $value->nome;
-            $dados['expiracao'] = Convert::dateToPtBr($value->expiracao);
+            $dados['expiracao'] = (!is_null($value->expiracao)) ? Convert::dateToPtBr($value->expiracao) : '-';
         }        
         return $dados;
     }
