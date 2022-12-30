@@ -53,9 +53,10 @@ class Servidor extends Record
     
     public function getStatusHw()
     {
-        $status =  StatusHardware::find($this->id_status_hardware);
-        var_dump($status);
-        //return $status;
+        if ($this->id_status_hardware == '0' || is_null($this->id_status_hardware)) return '-';
+        
+        $status_hw =  StatusHardware::find($this->id_status_hardware)->nome;
+        return $status_hw;
     }
     
     public function getGarantia()

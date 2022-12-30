@@ -25,7 +25,7 @@ class GeraRelatorio
             unset($avisos['id']);
             $this->dados['periodo'] = $periodo;
             $this->dados['avisos'] = $avisos;
-            $this->dados['topicos'] = $this->dadosTopicos();
+            $this->dados['topicos'] = $this->getTopicos();
 
             Transaction::open('Sisac'); // inicia transação com o BD
 
@@ -33,19 +33,23 @@ class GeraRelatorio
                 $cooperativa = Cooperativa::find($coop);
 
                 $this->dados['coop'][$coop] = $this->dadosCoop($cooperativa);
-                $this->dados['coop'][$coop]['antivirus'] = $this->dadosAv($coop);
-                $this->dados['coop'][$coop]['dominio'] = $this->dadosDominio($coop);
-                $this->dados['coop'][$coop]['servidores'] = $this->dadosServidor($coop);
+                $this->dados['coop'][$coop]['antivirus'] = $this->getAv($coop);
+                $this->dados['coop'][$coop]['dominio'] = $this->getDominio($coop);
+                $this->dados['coop'][$coop]['servidores'] = $this->getServidor($coop);
 
                 foreach ($this->dados['topicos'] as $key => $value) {
-                    $this->dados['coop'][$coop]['ev_topicos'][$key] = $this->dadosEvTopico($coop, ['id_topico', '=', $key]);
-                    //$this->dados['coop'][$coop]['ev_topicos'][$key]['itens'] = $this->dadosItens($coop);
+                    $this->dados['coop'][$coop]['ev_topicos'][$key] = $this->getEvTopico($coop, ['id_topico', '=', $key]);
+                    $this->dados['coop'][$coop]['ev_topicos'][$key]['itens'] = $this->getItens( $coop, 
+                                                                                                $this->dados['topicos'][$key]['itens'], 
+                                                                                                $key);
+                    //var_dump($this->dados['coop'][$coop]['ev_topicos'][$key]);
                 }
-                $this->dados['coop'][$coop]['ev_geral'] = $this->dadosEv($coop);
+                $this->dados['coop'][$coop]['ev_geral'] = $this->getEv($coop);
+                //var_dump($this->dados['coop'][$coop]['ev_topicos'][$key]);
 
-                //var_dump($this->dados['coop'][$coop]);exit;
             }
-            var_dump($this->dados['coop']);exit;    
+            //var_dump($this->dados['topicos']);
+            exit;    
 
             Transaction::close(); // finaliza a transação
         }
@@ -66,7 +70,7 @@ class GeraRelatorio
         return $dados_coop;
     }
 
-    private function dadosTopicos() 
+    private function getTopicos() 
     {
         $repository = new Repository('Topico');
         $criteria = new Criteria();
@@ -99,7 +103,7 @@ class GeraRelatorio
         return $lista_topicos;
     }
 
-    private function carregaBDCoop($coop, $active_record, $filter = false) 
+    private function getBDCoop($coop, $active_record, $filter = false) 
     {    
         $repository = new Repository($active_record);
         $criteria = new Criteria();
@@ -110,46 +114,48 @@ class GeraRelatorio
         return $repository->load($criteria);    
     }
 
-    private function dadosAv($coop) 
+    private function getAv($coop) 
     {        
         $dados = [];
-        foreach ($this->carregaBDCoop($coop, 'Antivirus') as $value) {
+        foreach ($this->getBDCoop($coop, 'Antivirus') as $value) {
             $dados['licencas'] = $value->licencas;
             $dados['expiracao'] = (!is_null($value->expiracao)) ? Convert::dateToPtBr($value->expiracao) : '-';
         }      
         return $dados;
     }
 
-    private function dadosDominio($coop) 
+    private function getDominio($coop) 
     {        
         $dados = [];
-        foreach ($this->carregaBDCoop($coop, 'Dominio') as $value) {
+        foreach ($this->getBDCoop($coop, 'Dominio') as $value) {
             $dados['nome'] = $value->nome;
             $dados['expiracao'] = (!is_null($value->expiracao)) ? Convert::dateToPtBr($value->expiracao) : '-';
         }        
         return $dados;
     }
 
-    private function dadosEvTopico($coop, $filter) 
+    private function getEvTopico($coop, $filter) 
     {        
-        foreach ($this->carregaBDCoop($coop, 'TopicoCooperativa', $filter) as $value) {
-            return ['evolucao' => "{$value->evolucao}%", 'observacao' => $value->observacao];
+        foreach ($this->getBDCoop($coop, 'TopicoCooperativa', $filter) as $value) {
+            return ['id' => $filter[2],
+                    'evolucao' => "{$value->evolucao}%", 
+                    'observacao' => $value->observacao];
         }        
         return;
     }
 
-    private function dadosEv($coop) 
+    private function getEv($coop) 
     {        
-        foreach ($this->carregaBDCoop($coop, 'PainelCooperativa') as $value) {
+        foreach ($this->getBDCoop($coop, 'PainelCooperativa') as $value) {
             return "{$value->evolucao}%";
         }        
         return;
     }
 
-    private function dadosServidor($coop) 
+    private function getServidor($coop) 
     {        
         $dados = [];
-        foreach ($this->carregaBDCoop($coop, 'Servidor') as $value) {
+        foreach ($this->getBDCoop($coop, 'Servidor') as $value) {
             $dados['nome'] = $value->nome;
             $dados['so'] = $value->getSistOp();
             $dados['fabricante'] = $value->getFabricante();
@@ -162,10 +168,12 @@ class GeraRelatorio
         return $dados;
     }
 
-    private function dadosItens($coop, $itens) 
+    private function getItens($coop, $itens, $tp) 
     {        
+        var_dump($coop, $tp, $itens);//exit;
         $dados = [];
-        foreach ($this->carregaBDCoop($coop, 'CoopItemStatus') as $value) {
+        foreach ($this->getBDCoop($coop, 'CoopItemStatus') as $value) {
+            $dados['nome'] = $value->nome;
             $dados['nome'] = $value->nome;
             $dados['expiracao'] = (!is_null($value->expiracao)) ? Convert::dateToPtBr($value->expiracao) : '-';
         }        
