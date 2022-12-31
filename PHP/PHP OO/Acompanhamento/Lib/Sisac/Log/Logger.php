@@ -1,5 +1,5 @@
 <?php
-namespace Sisac\Database;
+namespace Sisac\Log;
 
 /**
  * Fornece uma interface abstrata para definição de algoritmos de LOG

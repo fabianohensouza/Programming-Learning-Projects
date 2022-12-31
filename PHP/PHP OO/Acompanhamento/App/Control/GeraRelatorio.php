@@ -4,6 +4,7 @@ use Sisac\Utils\Convert;
 use Sisac\Database\Criteria;
 use Sisac\Database\Repository;
 use Sisac\Database\Transaction;
+use Sisac\Log\LoggerTXT;
 use Sisac\Widgets\Dialog\Message;
 
 /**
@@ -28,6 +29,7 @@ class GeraRelatorio
             $this->dados['topicos'] = $this->getTopicos();
 
             Transaction::open('Sisac'); // inicia transação com o BD
+            Transaction::setLogger(new LoggerTXT('App/Log/Log.txt'));
 
             foreach ($coops as $coop) {
                 $cooperativa = Cooperativa::find($coop);
@@ -40,16 +42,13 @@ class GeraRelatorio
                 foreach ($this->dados['topicos'] as $key => $value) {
                     $this->dados['coop'][$coop]['ev_topicos'][$key] = $this->getEvTopico($coop, ['id_topico', '=', $key]);
                     $this->dados['coop'][$coop]['ev_topicos'][$key]['itens'] = $this->getItens( $coop, 
-                                                                                                $this->dados['topicos'][$key]['itens'], 
-                                                                                                $key);
-                    //var_dump($this->dados['coop'][$coop]['ev_topicos'][$key]);
+                                                                                                $this->dados['topicos'][$key]['itens']);
+                    
                 }
-                $this->dados['coop'][$coop]['ev_geral'] = $this->getEv($coop);
-                //var_dump($this->dados['coop'][$coop]['ev_topicos'][$key]);
-
-            }
-            //var_dump($this->dados['topicos']);
-            exit;    
+                
+            }echo json_encode($this->dados);exit;
+            //var_dump($this->dados);exit;
+               
 
             Transaction::close(); // finaliza a transação
         }
@@ -168,15 +167,17 @@ class GeraRelatorio
         return $dados;
     }
 
-    private function getItens($coop, $itens, $tp) 
-    {        
-        var_dump($coop, $tp, $itens);//exit;
+    private function getItens($coop, $itens) 
+    {     
         $dados = [];
-        foreach ($this->getBDCoop($coop, 'CoopItemStatus') as $value) {
-            $dados['nome'] = $value->nome;
-            $dados['nome'] = $value->nome;
-            $dados['expiracao'] = (!is_null($value->expiracao)) ? Convert::dateToPtBr($value->expiracao) : '-';
-        }        
+
+        foreach ($itens as $item) {
+            foreach ($this->getBDCoop($coop, 'CoopItemStatus', ['id_item', '=', $item['id']]) as $value) {
+                $dados[$item['id']]['id'] = $value->id;
+                $dados[$item['id']]['status'] = $value->getStatusNome();
+            } 
+        }   
+              
         return $dados;
     }
 }

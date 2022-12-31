@@ -1,5 +1,5 @@
 <?php
-namespace Sisac\Database;
+namespace Sisac\Log;
 
 /**
  * Implementa o algoritmo de LOG em TXT
