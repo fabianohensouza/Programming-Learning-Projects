@@ -1,134 +1,134 @@
-2022-12-31 11:25:58 :: SELECT * FROM cooperativas WHERE id=1234
-2022-12-31 11:25:58 :: SELECT * FROM cidades WHERE id=1
-2022-12-31 11:25:58 :: SELECT * FROM antivirus WHERE (id_coop = '1234')
-2022-12-31 11:25:58 :: SELECT * FROM dominio_internet WHERE (id_coop = '1234')
-2022-12-31 11:25:58 :: SELECT * FROM servidores WHERE (id_coop = '1234')
-2022-12-31 11:25:58 :: SELECT * FROM sistema_op WHERE id=4
-2022-12-31 11:25:58 :: SELECT * FROM fabricantes WHERE id=3
-2022-12-31 11:25:58 :: SELECT * FROM tipo_servidor WHERE id=1
-2022-12-31 11:25:58 :: SELECT * FROM status_hardware WHERE id=1
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '1234' and id_topico = 2)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '1')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=5
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '2')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=5
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '3')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=6
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '1234' and id_topico = 1)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '5')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=4
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '1234' and id_topico = 4)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '7')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=6
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '8')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=4
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '1234' and id_topico = 7)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '6')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=2
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '1234' and id_topico = 5)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '9')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=1
-2022-12-31 11:25:58 :: SELECT * FROM cooperativas WHERE id=3178
-2022-12-31 11:25:58 :: SELECT * FROM cidades WHERE id=110
-2022-12-31 11:25:58 :: SELECT * FROM antivirus WHERE (id_coop = '3178')
-2022-12-31 11:25:58 :: SELECT * FROM dominio_internet WHERE (id_coop = '3178')
-2022-12-31 11:25:58 :: SELECT * FROM servidores WHERE (id_coop = '3178')
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '3178' and id_topico = 2)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '1')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=4
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '2')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=4
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '3')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=6
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '3178' and id_topico = 1)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '5')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=4
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '3178' and id_topico = 4)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '7')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=5
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '8')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=5
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '3178' and id_topico = 7)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '6')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=6
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '3178' and id_topico = 5)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '9')
-2022-12-31 11:25:58 :: SELECT * FROM cooperativas WHERE id=5896
-2022-12-31 11:25:58 :: SELECT * FROM cidades WHERE id=9
-2022-12-31 11:25:58 :: SELECT * FROM antivirus WHERE (id_coop = '5896')
-2022-12-31 11:25:58 :: SELECT * FROM dominio_internet WHERE (id_coop = '5896')
-2022-12-31 11:25:58 :: SELECT * FROM servidores WHERE (id_coop = '5896')
-2022-12-31 11:25:58 :: SELECT * FROM sistema_op WHERE id=1
-2022-12-31 11:25:58 :: SELECT * FROM fabricantes WHERE id=11
-2022-12-31 11:25:58 :: SELECT * FROM tipo_servidor WHERE id=1
-2022-12-31 11:25:58 :: SELECT * FROM status_hardware WHERE id=3
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '5896' and id_topico = 2)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '1')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=1
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '2')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=1
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '3')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=4
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '5896' and id_topico = 1)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '5')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=6
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '5896' and id_topico = 4)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '7')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=3
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '8')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=6
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '5896' and id_topico = 7)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '6')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=6
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '5896' and id_topico = 5)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '9')
-2022-12-31 11:25:58 :: SELECT * FROM cooperativas WHERE id=8745
-2022-12-31 11:25:58 :: SELECT * FROM cidades WHERE id=208
-2022-12-31 11:25:58 :: SELECT * FROM antivirus WHERE (id_coop = '8745')
-2022-12-31 11:25:58 :: SELECT * FROM dominio_internet WHERE (id_coop = '8745')
-2022-12-31 11:25:58 :: SELECT * FROM servidores WHERE (id_coop = '8745')
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '8745' and id_topico = 2)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '1')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=4
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '2')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=6
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '3')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=5
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '8745' and id_topico = 1)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '5')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=4
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '8745' and id_topico = 4)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '7')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=6
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '8')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=6
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '8745' and id_topico = 7)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '6')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=6
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '8745' and id_topico = 5)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '9')
-2022-12-31 11:25:58 :: SELECT * FROM cooperativas WHERE id=9555
-2022-12-31 11:25:58 :: SELECT * FROM cidades WHERE id=307
-2022-12-31 11:25:58 :: SELECT * FROM antivirus WHERE (id_coop = '9555')
-2022-12-31 11:25:58 :: SELECT * FROM dominio_internet WHERE (id_coop = '9555')
-2022-12-31 11:25:58 :: SELECT * FROM servidores WHERE (id_coop = '9555')
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '9555' and id_topico = 2)
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '1')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=2
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '2')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=6
-2022-12-31 11:25:58 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '3')
-2022-12-31 11:25:58 :: SELECT * FROM status_item WHERE id=2
-2022-12-31 11:25:58 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '9555' and id_topico = 1)
-2022-12-31 11:25:59 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '5')
-2022-12-31 11:25:59 :: SELECT * FROM status_item WHERE id=5
-2022-12-31 11:25:59 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '9555' and id_topico = 4)
-2022-12-31 11:25:59 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '7')
-2022-12-31 11:25:59 :: SELECT * FROM status_item WHERE id=5
-2022-12-31 11:25:59 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '8')
-2022-12-31 11:25:59 :: SELECT * FROM status_item WHERE id=5
-2022-12-31 11:25:59 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '9555' and id_topico = 7)
-2022-12-31 11:25:59 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '6')
-2022-12-31 11:25:59 :: SELECT * FROM status_item WHERE id=5
-2022-12-31 11:25:59 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '9555' and id_topico = 5)
-2022-12-31 11:25:59 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '9')
+2023-01-02 22:15:08 :: SELECT * FROM cooperativas WHERE id=1234
+2023-01-02 22:15:08 :: SELECT * FROM cidades WHERE id=1
+2023-01-02 22:15:08 :: SELECT * FROM antivirus WHERE (id_coop = '1234')
+2023-01-02 22:15:08 :: SELECT * FROM dominio_internet WHERE (id_coop = '1234')
+2023-01-02 22:15:08 :: SELECT * FROM servidores WHERE (id_coop = '1234')
+2023-01-02 22:15:08 :: SELECT * FROM sistema_op WHERE id=4
+2023-01-02 22:15:08 :: SELECT * FROM fabricantes WHERE id=3
+2023-01-02 22:15:08 :: SELECT * FROM tipo_servidor WHERE id=1
+2023-01-02 22:15:08 :: SELECT * FROM status_hardware WHERE id=1
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '1234' and id_topico = 2)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '1')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=5
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '2')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=5
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '3')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=6
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '1234' and id_topico = 1)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '5')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=4
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '1234' and id_topico = 4)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '7')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=6
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '8')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=4
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '1234' and id_topico = 7)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '6')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=2
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '1234' and id_topico = 5)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '1234' and id_item = '9')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=1
+2023-01-02 22:15:08 :: SELECT * FROM cooperativas WHERE id=3178
+2023-01-02 22:15:08 :: SELECT * FROM cidades WHERE id=110
+2023-01-02 22:15:08 :: SELECT * FROM antivirus WHERE (id_coop = '3178')
+2023-01-02 22:15:08 :: SELECT * FROM dominio_internet WHERE (id_coop = '3178')
+2023-01-02 22:15:08 :: SELECT * FROM servidores WHERE (id_coop = '3178')
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '3178' and id_topico = 2)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '1')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=4
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '2')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=4
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '3')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=6
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '3178' and id_topico = 1)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '5')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=4
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '3178' and id_topico = 4)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '7')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=5
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '8')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=5
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '3178' and id_topico = 7)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '6')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=6
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '3178' and id_topico = 5)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '3178' and id_item = '9')
+2023-01-02 22:15:08 :: SELECT * FROM cooperativas WHERE id=5896
+2023-01-02 22:15:08 :: SELECT * FROM cidades WHERE id=9
+2023-01-02 22:15:08 :: SELECT * FROM antivirus WHERE (id_coop = '5896')
+2023-01-02 22:15:08 :: SELECT * FROM dominio_internet WHERE (id_coop = '5896')
+2023-01-02 22:15:08 :: SELECT * FROM servidores WHERE (id_coop = '5896')
+2023-01-02 22:15:08 :: SELECT * FROM sistema_op WHERE id=1
+2023-01-02 22:15:08 :: SELECT * FROM fabricantes WHERE id=11
+2023-01-02 22:15:08 :: SELECT * FROM tipo_servidor WHERE id=1
+2023-01-02 22:15:08 :: SELECT * FROM status_hardware WHERE id=3
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '5896' and id_topico = 2)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '1')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=1
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '2')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=1
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '3')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=4
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '5896' and id_topico = 1)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '5')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=6
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '5896' and id_topico = 4)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '7')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=3
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '8')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=6
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '5896' and id_topico = 7)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '6')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=6
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '5896' and id_topico = 5)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '5896' and id_item = '9')
+2023-01-02 22:15:08 :: SELECT * FROM cooperativas WHERE id=8745
+2023-01-02 22:15:08 :: SELECT * FROM cidades WHERE id=208
+2023-01-02 22:15:08 :: SELECT * FROM antivirus WHERE (id_coop = '8745')
+2023-01-02 22:15:08 :: SELECT * FROM dominio_internet WHERE (id_coop = '8745')
+2023-01-02 22:15:08 :: SELECT * FROM servidores WHERE (id_coop = '8745')
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '8745' and id_topico = 2)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '1')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=4
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '2')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=6
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '3')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=5
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '8745' and id_topico = 1)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '5')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=4
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '8745' and id_topico = 4)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '7')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=6
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '8')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=6
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '8745' and id_topico = 7)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '6')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=6
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '8745' and id_topico = 5)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '8745' and id_item = '9')
+2023-01-02 22:15:08 :: SELECT * FROM cooperativas WHERE id=9555
+2023-01-02 22:15:08 :: SELECT * FROM cidades WHERE id=307
+2023-01-02 22:15:08 :: SELECT * FROM antivirus WHERE (id_coop = '9555')
+2023-01-02 22:15:08 :: SELECT * FROM dominio_internet WHERE (id_coop = '9555')
+2023-01-02 22:15:08 :: SELECT * FROM servidores WHERE (id_coop = '9555')
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '9555' and id_topico = 2)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '1')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=2
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '2')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=6
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '3')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=2
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '9555' and id_topico = 1)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '5')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=5
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '9555' and id_topico = 4)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '7')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=5
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '8')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=5
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '9555' and id_topico = 7)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '6')
+2023-01-02 22:15:08 :: SELECT * FROM status_item WHERE id=5
+2023-01-02 22:15:08 :: SELECT * FROM topico_cooperativa WHERE (id_coop = '9555' and id_topico = 5)
+2023-01-02 22:15:08 :: SELECT * FROM coop_item_status WHERE (id_coop = '9555' and id_item = '9')

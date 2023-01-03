@@ -24,7 +24,7 @@ class GeraRelatorio
             $this->dados = array();
 
             unset($avisos['id']);
-            $this->dados['periodo'] = $periodo;
+            $this->dados['periodo'] = $this->getPeriodo($periodo);
             $this->dados['avisos'] = $avisos;
             $this->dados['topicos'] = $this->getTopicos();
 
@@ -34,7 +34,7 @@ class GeraRelatorio
             foreach ($coops as $coop) {
                 $cooperativa = Cooperativa::find($coop);
 
-                $this->dados['coop'][$coop] = $this->dadosCoop($cooperativa);
+                $this->dados['coop'][$coop] = $this->getDadosCoop($cooperativa);
                 $this->dados['coop'][$coop]['antivirus'] = $this->getAv($coop);
                 $this->dados['coop'][$coop]['dominio'] = $this->getDominio($coop);
                 $this->dados['coop'][$coop]['servidores'] = $this->getServidor($coop);
@@ -46,8 +46,10 @@ class GeraRelatorio
                     
                 }
                 
-            }echo json_encode($this->dados);exit;
-            //var_dump($this->dados);exit;
+            }
+
+            $relatorio = $this->getHTML();
+            var_dump($this->dados);exit;
                
 
             Transaction::close(); // finaliza a transação
@@ -61,12 +63,23 @@ class GeraRelatorio
         }
     }
 
-    private function dadosCoop($coop) 
+    private function getDadosCoop($coop) 
     {
         $dados_coop['id'] = $coop->id;
         $dados_coop['nome'] = $coop->nome;
         $dados_coop['cidade'] = $coop->get_cidade();
         return $dados_coop;
+    }
+
+    private function getPeriodo($periodo) 
+    {
+        $dados = [];
+        $array = explode("-",$periodo);
+
+        $dados['mes'] = Convert::monthName((int) $array[1]);
+        $dados['ano'] = $array[0];
+        
+        return $dados;
     }
 
     private function getTopicos() 
@@ -179,5 +192,22 @@ class GeraRelatorio
         }   
               
         return $dados;
+    }
+
+    private function getHTML() 
+    {     
+        /*$loader = new \Twig\Loader\ArrayLoader($this->dados);
+        $twig = new \Twig\Environment($loader);
+        
+        echo $twig->render('App/Templates/template.html', ['name' => 'Fabien']);*/
+        $dados = [];
+        $dados['dados'] = $this->dados;
+
+        $loader = new \Twig\Loader\FilesystemLoader('App/Resources');
+        $twig = new \Twig\Environment($loader);
+
+        echo $twig->render('acpmt_report.html', $dados);
+            
+        exit;//return $html;
     }
 }
