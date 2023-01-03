@@ -602,15 +602,17 @@
 </head>
 
 <body class="c15 doc-content">
+    {% for coop in dados.coop %}
     <p class="c4 c10"><span class="c7"></span></p><a id="t.7b70470913d1b38cc8095c54c474d43275460e20"></a><a
         id="t.0"></a>
     <table class="c35">
         <tr class="c24">
             <td class="c3" colspan="1" rowspan="1">
                 <p class="c8"><span class="c19 c21">Relat&oacute;rio de Acompanhamento Mensal de TI</span></p>
-                <p class="c8"><span class="c19 c21">{{dados.periodo.mes}} de {{dados.periodo.ano}}</span></p>
+                <p class="c8"><span class="c19 c21">{{coop.id}} - {{coop.nome}}</span></p>
                 <p class="c8 c10"><span class="c19 c21"></span></p>
-                <p class="c8"><span class="c9">Per&iacute;odo: {MES} de {ANO}.</span></p>
+                <p class="c8"><span class="c9">Per&iacute;odo: {{dados.periodo.mes}} de {{dados.periodo.ano}}.</span>
+                </p>
                 <p class="c8 c10"><span class="c9"></span></p>
                 <p class="c4"><span class="c7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut
                         tristique sapien. Sed sit amet turpis vel leo posuere placerat. In non tempor sem. Praesent
@@ -628,7 +630,9 @@
                     <tr class="c33">
                         <td class="c20" colspan="1" rowspan="1">
                             <ul class="c26 lst-kix_a4i2a9xzmro8-0 start">
-                                <li class="c0 c2 c5 li-bullet-0"><span class="c7">{AVISO}</span></li>
+                                {% for aviso in dados.avisos %}
+                                <li class="c0 c2 c5 li-bullet-0"><span class="c7">{{aviso}}</span></li>
+                                {% endfor %}
                             </ul>
                         </td>
                     </tr>
@@ -639,7 +643,9 @@
                     </tr>
                     <tr class="c6">
                         <td class="c20" colspan="1" rowspan="1">
-                            <p class="c0"><span class="c7">Dominio de Internet {DOMINIO} expira em {DATADOM}</span></p>
+                            <p class="c0"><span class="c7">
+                                    Dominio de Internet {{coop.dominio.nome}} expira em {{coop.dominio.expiracao}}
+                                </span></p>
                         </td>
                     </tr>
                     <tr class="c6">
@@ -772,6 +778,7 @@
         </tr>
     </table>
     <p class="c4 c10"><span class="c7"></span></p>
+    {% endfor %}
 </body>
 
 </html>

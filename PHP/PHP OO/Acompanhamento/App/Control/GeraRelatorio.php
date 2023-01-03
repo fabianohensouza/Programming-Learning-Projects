@@ -31,6 +31,8 @@ class GeraRelatorio
             Transaction::open('Sisac'); // inicia transação com o BD
             Transaction::setLogger(new LoggerTXT('App/Log/Log.txt'));
 
+            $relatorio = [];
+
             foreach ($coops as $coop) {
                 $cooperativa = Cooperativa::find($coop);
 
@@ -45,10 +47,10 @@ class GeraRelatorio
                                                                                                 $this->dados['topicos'][$key]['itens']);
                     
                 }
-                
+            
+                $relatorio[$coop] = $this->getHTML();                
             }
 
-            $relatorio = $this->getHTML();
             var_dump($this->dados);exit;
                
 
