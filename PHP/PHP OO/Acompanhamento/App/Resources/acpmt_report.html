@@ -650,22 +650,16 @@
                     </tr>
                     <tr class="c6">
                         <td class="c20" colspan="1" rowspan="1">
-                            <p class="c0"><span class="c7">As {AVQTD} licen&ccedil;as de Aniv&iacute;rus expiram em
-                                    {DATAAV}</span></p>
-                        </td>
-                    </tr>
-                    <tr class="c6">
-                        <td class="c20" colspan="1" rowspan="1">
-                            <p class="c0"><span class="c7">As {SEGQTD} licen&ccedil;as do recurso de seguran&ccedil;
-                                    {SEGPROD} expiram em
-                                    {DATASEG}</span></p>
+                            <p class="c0"><span class="c7">As {{coop.antivirus.licencas}} licen&ccedil;as de
+                                    Aniv&iacute;rus expiram em
+                                    {{coop.antivirus.expiracao}}</span></p>
                         </td>
                     </tr>
                 </table>
                 <p class="c4 c10"><span class="c7"></span></p>
+                <p class="c4 c10"><span class="c7"></span></p>
+                <p class="c4 c10"><span class="c7"></span></p>
                 <p class="c4"><span class="c7">Resumo dos t&oacute;picos acompanhados:</span></p>
-                <p class="c4 c10"><span class="c7"></span></p>
-                <p class="c4 c10"><span class="c7"></span></p>
                 <p class="c4 c10"><span class="c7"></span></p><a id="t.67e1f25a8e281dc75a898bf674bbf1427b32845b"></a><a
                     id="t.2"></a>
                 <table class="c16">
@@ -677,25 +671,19 @@
                             <p class="c8"><span class="c1">EVOLU&Ccedil;&Atilde;O</span></p>
                         </td>
                     </tr>
+                    {% for topico in coop.topicos %}
                     <tr class="c6">
                         <td class="c18" colspan="1" rowspan="1">
-                            <p class="c0"><span class="c7">{ORDEM} - {TOPICONOME}</span></p>
+                            <p class="c0"><span class="c7">{{topico.ordem}} - {{topico.nome}}</span></p>
                         </td>
                         <td class="c12" colspan="1" rowspan="1">
-                            <p class="c25"><span class="c7">{TOPICOEV}%</span></p>
+                            <p class="c25"><span class="c7">{{topico.ev_topico}}</span></p>
                         </td>
                     </tr>
-                    <tr class="c6">
-                        <td class="c18" colspan="1" rowspan="1">
-                            <p class="c0"><span class="c7">{ORDEM} - {TOPICONOME}</span></p>
-                        </td>
-                        <td class="c12" colspan="1" rowspan="1">
-                            <p class="c25"><span class="c7">{TOPICOEV}%</span></p>
-                        </td>
-                    </tr>
+                    {% endfor %}
                     <tr class="c28">
                         <td class="c23" colspan="2" rowspan="1">
-                            <p class="c8"><span class="c1">EVOLU&Ccedil;&Atilde;O GERAL: {COOPEV}%</span></p>
+                            <p class="c8"><span class="c1">EVOLU&Ccedil;&Atilde;O GERAL: {{coop.ev_coop}}</span></p>
                         </td>
                     </tr>
                 </table>
@@ -704,6 +692,7 @@
         </tr>
     </table>
     <p class="c4 c10"><span class="c7"></span></p>
+    {% for topico in coop.topicos %}
     <p class="c4 c10"><span class="c7"></span></p><a id="t.fc305593931e35f23f2a320a9e3f2f51a1b8d897"></a><a
         id="t.3"></a>
     <table class="c35">
@@ -714,16 +703,16 @@
                 <table class="c16">
                     <tr class="c28">
                         <td class="c14 c27" colspan="2" rowspan="1">
-                            <p class="c8"><span class="c1">{ORDEM} - {TOPICONOME}</span></p>
+                            <p class="c8"><span class="c1">{{topico.ordem}} - {{topico.nome}}</span></p>
                         </td>
                     </tr>
                     <tr class="c29">
                         <td class="c14" colspan="2" rowspan="1">
                             <p class="c0"><span class="c19 c11">Defini&ccedil;&atilde;o:</span></p>
-                            <p class="c0"><span class="c7">{DEFINICAO}</span></p>
+                            <p class="c0"><span class="c7">{{topico.descricao}}</span></p>
                             <p class="c0 c10"><span class="c7"></span></p>
                             <p class="c0"><span class="c19 c11">Conformidade:</span></p>
-                            <p class="c0"><span class="c7">{CONFORMIDADE}</span></p>
+                            <p class="c0"><span class="c7">{{topico.conformidade}}</span></p>
                         </td>
                     </tr>
                     <tr class="c30">
@@ -734,32 +723,26 @@
                             <p class="c8"><span class="c1">Status</span></p>
                         </td>
                     </tr>
+                    {% for item in topico.itens %}
                     <tr class="c6">
                         <td class="c18" colspan="1" rowspan="1">
-                            <p class="c0"><span class="c7">{ITEM}</span></p>
+                            <p class="c0"><span class="c7">{{item.descricao}}</span></p>
                         </td>
                         <td class="c17" colspan="1" rowspan="1">
-                            <p class="c25"><span class="c7">{STATUS}</span></p>
+                            <p class="c25"><span class="c7">{{item.status}}</span></p>
                         </td>
                     </tr>
-                    <tr class="c6">
-                        <td class="c18" colspan="1" rowspan="1">
-                            <p class="c0"><span class="c7">{ITEM}</span></p>
-                        </td>
-                        <td class="c17" colspan="1" rowspan="1">
-                            <p class="c25"><span class="c7">{STATUS}</span></p>
-                        </td>
-                    </tr>
+                    {% endfor %}
                     <tr class="c6">
                         <td class="c14 c27" colspan="2" rowspan="1">
-                            <p class="c8"><span class="c1">{TOPICOEV}</span></p>
+                            <p class="c8"><span class="c1">Evolução do tópico: {{topico.ev_topico}}</span></p>
                         </td>
                     </tr>
                     <tr class="c6">
                         <td class="c14" colspan="2" rowspan="1">
                             <p class="c0"><span class="c19 c11">Observa&ccedil;&otilde;es:</span></p>
                             <ul class="c26 lst-kix_a4i2a9xzmro8-0">
-                                <li class="c0 c2 c5 li-bullet-0"><span class="c11">{OBS}</span></li>
+                                <li class="c0 c2 c5 li-bullet-0"><span class="c11">{{topico.observacao}}</span></li>
                             </ul>
                             <p class="c0 c10"><span class="c7"></span></p>
                             <p class="c0"><span class="c19 c11">Status Servidores:</span></p>
@@ -778,6 +761,7 @@
         </tr>
     </table>
     <p class="c4 c10"><span class="c7"></span></p>
+    {% endfor %}
     {% endfor %}
 </body>
 

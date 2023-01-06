@@ -43,22 +43,24 @@ class GeraRelatorio
 
                 foreach ($this->getTopicos() as $topico) {
                     $id_tipoco =$topico['id'];
+
+                    $this->dados['coop'][$coop]['topicos'][$id_tipoco] = $topico;                    
+
                     $ev = $this->getEvTopico($coop, ['id_topico', '=', $id_tipoco]);
+                    $this->dados['coop'][$coop]['topicos'][$id_tipoco]['ev_topico'] = $ev['ev_topico'];
+                    $this->dados['coop'][$coop]['topicos'][$id_tipoco]['observacao'] = $ev['observacao'];
 
-                    $this->dados['coop'][$coop]['topicos'][$id_tipoco] = $this->getTopicos();
-                    $this->dados['coop'][$coop]['topicos'][$id_tipoco] = array_merge($this->dados['coop'][$coop]['topicos'][$id_tipoco], $ev);
-                    var_dump($this->dados['coop'][$coop]['topicos'][$id_tipoco]);exit;
-                    $this->dados['coop'][$coop]['topicos'][$id_tipoco]['ev'] = $this->getEvTopico($coop, ['id_topico', '=', $id_tipoco]);
-
-                    foreach ($this->dados['coop'][$coop]['topicos'][$id_tipoco]['itens'] as $key2 => $value2) {
-                        $this->dados['coop'][$coop]['topicos'][$id_tipoco]['itens'][$key2]['status'] = $this->getItemStatus($coop,$key2);                        
+                    foreach ($this->dados['coop'][$coop]['topicos'][$id_tipoco]['itens'] as $key => $value) {
+                        $this->dados['coop'][$coop]['topicos'][$id_tipoco]['itens'][$key]['status'] = $this->getItemStatus($coop,$key);                        
                     }
-                }            
-                var_dump($this->dados);exit;
-                //$relatorio[$coop] = $this->getHTML();                
-            }
+                }  
+                
+                $this->dados['coop'][$coop]['ev_coop'] = $this->getEvCoop($coop);//var_dump($this->dados);exit;
+                
+                $relatorio[$coop] = $this->getHTML();   
 
-               
+            }
+            exit;               
 
             Transaction::close(); // finaliza a transação
         }
@@ -157,13 +159,15 @@ class GeraRelatorio
     private function getEvTopico($coop, $filter) 
     {        
         foreach ($this->getBDCoop($coop, 'TopicoCooperativa', $filter) as $value) {
-        return [    'evolucao' => "{$value->evolucao}%", 
+        return [    'ev_topico' => "{$value->evolucao}%", 
                     'observacao' => $value->observacao];
         }        
-        return '-';
+        
+        return [    'ev_topico' => '-', 
+                    'observacao' => '-'];
     }
 
-    private function getEv($coop) 
+    private function getEvCoop($coop) 
     {        
         foreach ($this->getBDCoop($coop, 'PainelCooperativa') as $value) {
             return "{$value->evolucao}%";
@@ -207,7 +211,8 @@ class GeraRelatorio
         $twig = new \Twig\Environment($loader);
 
         echo $twig->render('acpmt_report.html', $dados);
-            
-        exit;//return $html;
+        
+        //$html = $twig->render('acpmt_report.html', $dados);
+        //return $html;
     }
 }
