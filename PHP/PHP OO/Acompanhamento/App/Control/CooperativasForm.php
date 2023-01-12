@@ -236,7 +236,7 @@ class CooperativasForm extends Page
                             $contrato->status = Status::find($contrato->status)->nome;
                             
                             // adiciona o objeto na Datagrid
-                            $this->datagrid_contrato->addItem($contrato);//var_dump($contrato);exit;
+                            $this->datagrid_contrato->addItem($contrato);
                         }
                     }
 

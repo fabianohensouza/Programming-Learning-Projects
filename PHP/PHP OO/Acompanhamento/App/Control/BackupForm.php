@@ -43,16 +43,13 @@ class BackupForm extends Page
             if (isset($_REQUEST['id'])) {
 
                 $this->bkpcoop  = Backup::find($_REQUEST['id']);
-                $this->coop     =  Cooperativa::find($this->bkpcoop->id_coop);
+                $this->coop     = Cooperativa::find($this->bkpcoop->id_coop); 
 
             } else if (isset($_REQUEST['id_coop'])) {
 
                 $this->coop =  Cooperativa::find($_REQUEST['id_coop']);
 
-            } /*else {
-                $this->bkpcoop = Backup::find($_REQUEST['id']);
-                $this->coop =  Cooperativa::find($this->bkpcoop->id_coop);
-            }*/
+            }
 
             // instancia um formulário
             $this->form = new FormWrapper(new Form('form_backup'));
@@ -152,6 +149,40 @@ class BackupForm extends Page
                 $painel->add($this->datagrid);
 
                 parent::add($painel);
+
+                $url = http_build_query([
+                    'class'     => 'TesteBabckupForm',
+                    'method'    => 'onEdit',
+                    'id_backup'   => $_GET['id']
+                ]);
+
+                $link = new Element('a');
+                $link->__set('href', 'index.php?' . $url);
+                $link->add('Cadastrar Teste');
+                $link->__set('type', 'button');
+                $link->__set('class', 'btn btn-default');
+
+                $painel_teste = new Panel();
+                $painel_teste->add($link);
+                $painel_teste->add(new Element('hr'));
+
+                $this->datagrid_teste = new DatagridWrapper(new Datagrid);
+
+                $evidencia  = new DatagridColumn('evidencia',       'Evidência',    'center', '10%');
+                $data       = new DatagridColumn('data',       'Data',    'center', '10%');
+                $obs        = new DatagridColumn('obs','Observações', 'center', '80%');
+
+                $this->datagrid_teste->addColumn($evidencia);
+                $this->datagrid_teste->addColumn($data);
+                $this->datagrid_teste->addColumn($obs);
+
+                $action = new Action(["TesteBabckupForm", 'onEdit']);
+                $action->setParameter('id_coop', $_GET['id']);
+                $this->datagrid_teste->addAction( 'Editar',  $action, 'id', 'fa fa-edit fa-lg blue');
+
+                $painel_teste->add($this->datagrid_teste);
+
+                parent::add($painel_teste);
             
             }
                 
@@ -209,7 +240,7 @@ class BackupForm extends Page
 
             Transaction::open('Sisac'); // inicia transação com o BD$
             
-            if ($_REQUEST['id']) {
+            if (isset($_REQUEST['id'])) {
                 
                 $this->form->setData(Backup::find($_REQUEST['id']));               
 
@@ -247,6 +278,30 @@ class BackupForm extends Page
 
                         // adiciona o objeto na Datagrid
                         $this->datagrid->addItem($job);
+                    }
+                }
+            }
+
+            if ($this->datagrid_teste) {                    
+                
+                //carregando dados dos testes de backup
+                $repository = new Repository('TesteBackup');
+                $criteria = new Criteria();
+                $criteria->add('id_backup', '=', $_REQUEST['id']);
+                $lista_testebkp = $repository->load($criteria);
+    
+                $this->datagrid_teste->clear();
+                if ($lista_testebkp)
+                {
+                    foreach ($lista_testebkp as $testebkp)
+                    {   
+                        $testebkp->arquivo =   '<a target="_blank" rel="noopener noreferrer" href="' . Anexo::find($testebkp->id_anexo)->caminho . '"> 
+                                                    Visualizar 
+                                                </a>';
+                        $testebkp->data   = Convert::dateToPtBr($testebkp->data);
+                        
+                        // adiciona o objeto na Datagrid
+                        $this->datagrid_testebkp->addItem($testebkp);
                     }
                 }
             }
