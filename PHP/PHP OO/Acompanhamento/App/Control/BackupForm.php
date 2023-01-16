@@ -282,13 +282,13 @@ class BackupForm extends Page
                 }
             }
 
+            Transaction::close(); // finaliza a transação
+            Transaction::open('Sisac'); // inicia transação com o BD$
+
             if ($this->datagrid_teste) {                    
                 
                 //carregando dados dos testes de backup
-                $repository = new Repository('TesteBackup');
-                $criteria = new Criteria();
-                $criteria->add('id_backup', '=', $_REQUEST['id']);
-                $lista_testebkp = $repository->load($criteria);
+                $lista_testebkp = TesteBackup::find('1');
     
                 $this->datagrid_teste->clear();
                 if ($lista_testebkp)

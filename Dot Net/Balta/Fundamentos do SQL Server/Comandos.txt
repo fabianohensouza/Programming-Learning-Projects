@@ -1,0 +1,5 @@
+Criar banco com configs padrão
+- CREATE DATABASE [nome]
+
+Deletar banco
+- DROP DATABASE [nome]

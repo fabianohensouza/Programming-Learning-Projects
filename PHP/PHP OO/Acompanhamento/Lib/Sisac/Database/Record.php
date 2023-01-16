@@ -178,11 +178,11 @@ abstract class Record implements RecordInterface
      * Recupera (retorna) um objeto da base de dados pelo seu ID
      * @param $id = ID do objeto
      */
-    public function load($id)
+    public function load($id, $field = 'id')
     {
         // instancia instrução de SELECT
         $sql = "SELECT * FROM {$this->getEntity()}";
-        $sql .= ' WHERE id=' . (int) $id;
+        $sql .= ' WHERE ' . $field . '=' . (int) $id;
         
         // obtém transação ativa
         if ($conn = Transaction::get())
@@ -274,11 +274,11 @@ abstract class Record implements RecordInterface
     /**
      * Busca um objeto pelo id
      */
-    public static function find($id)
+    public static function find($id, $field = 'id')
     {
         $classname = get_called_class();
         $ar = new $classname;
-        return $ar->load($id);
+        return $ar->load($id, $field);
     }
     
     public function prepare($data)

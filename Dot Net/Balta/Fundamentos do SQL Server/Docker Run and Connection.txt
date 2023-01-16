@@ -8,6 +8,12 @@ Connection String
 
 Server=localhost,1433;Database=balta;User ID=sa;Password=1q2w3e4r@#$
 
+Conexão
+- Host: localhost,1433
+- Autenticação - SQL Login
+- User: sa
+- Password: 1q2w3e4r@#$
+
 ----------------------------------------------------------------------------------------
 
 Erros comuns
