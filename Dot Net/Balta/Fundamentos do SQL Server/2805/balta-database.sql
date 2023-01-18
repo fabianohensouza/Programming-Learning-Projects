@@ -77,7 +77,7 @@ CREATE TABLE [Course]
     [Tags] NVARCHAR(160) NOT NULL,
     CONSTRAINT [PK_Course] PRIMARY KEY ([Id]),
     CONSTRAINT [FK_Course_Author_AuthorId] FOREIGN KEY ([AuthorId]) REFERENCES [Author] ([Id]),
-    CONSTRAINT [FK_Course_Category_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Category] ([Id])
+    CONSTRAINT [FK_Course_Category_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Category] ([Id])    
 );
 GO
 
