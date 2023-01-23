@@ -20,7 +20,7 @@ SELECT NEWID()
 
 DROP TABLE [Curso]
 CREATE TABLE [Curso] (
-    [Id] INT NOT NULL IDENTITY(1, 1), 
+    [Id] INT NOT NULL IDENTITY(1, 1), #Semelhante ao Autoincrement
     [Nome] NVARCHAR(80) NOT NULL,
     [CategoriaId] INT NOT NULL,
 
