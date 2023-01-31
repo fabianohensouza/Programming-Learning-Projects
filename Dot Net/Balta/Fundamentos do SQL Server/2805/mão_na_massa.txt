@@ -1,0 +1,17 @@
+CREATE DATABASE [school]
+
+CREATE TABLE [student]
+(
+    [Id] UNIQUEIDENTIFIER NOT NULL, --GUID
+    [Name] NVARCHAR(120) NOT NULL,
+    [Email] NVARCHAR(180)  NOT NULL,
+    [Document] NVARCHAR(20)  NOT NULL,
+    [Phone]NVARCHAR(20)  NOT NULL,
+    [Birthdate] DATETIME NOT NULL,
+    [Createdate] DATETIME NOT NULL DEFault(GETDATE()),
+    CONSTRAINT [PK_Student] PRIMARY KEY ([Id])
+);
+GO
+
+###################################################################
+
