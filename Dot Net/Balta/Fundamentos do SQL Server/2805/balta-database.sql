@@ -76,8 +76,8 @@ CREATE TABLE [Course]
     [CategoryId] uniqueidentifier NOT NULL,
     [Tags] NVARCHAR(160) NOT NULL,
     CONSTRAINT [PK_Course] PRIMARY KEY ([Id]),
-    CONSTRAINT [FK_Course_Author_AuthorId] FOREIGN KEY ([AuthorId]) REFERENCES [Author] ([Id]),
-    CONSTRAINT [FK_Course_Category_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Category] ([Id])    
+    CONSTRAINT [FK_Course_Author_AuthorId] FOREIGN KEY ([AuthorId]) REFERENCES [Author] ([Id]) ON DELETE NO ACTION, --Default or (ON DELETE CASCADE)
+    CONSTRAINT [FK_Course_Category_CategoryId] FOREIGN KEY ([CategoryId]) REFERENCES [Category] ([Id])  ON DELETE NO ACTION   
 );
 GO
 
@@ -87,9 +87,8 @@ CREATE TABLE [CareerItem]
     [CourseId] uniqueidentifier NOT NULL,
     [Title] NVARCHAR(160) NOT NULL,
     [Description] TEXT NOT NULL,
-    [Order] TINYINT NOT NULL,
-    
-    CONSTRAINT [PK_CareerItem] PRIMARY KEY ([CourseId], [CareerId]),
+    [Order] TINYINT NOT NULL,    
+    CONSTRAINT [PK_CareerItem] PRIMARY KEY ([CourseId], [CareerId]), --Composite key
     CONSTRAINT [FK_CareerItem_Career_CareerId] FOREIGN KEY ([CareerId]) REFERENCES [Career] ([Id]),
     CONSTRAINT [FK_CareerItem_Course_CourseId] FOREIGN KEY ([CourseId]) REFERENCES [Course] ([Id])
 );

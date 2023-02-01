@@ -1,17 +1,43 @@
-CREATE DATABASE [school]
+A criaçã da tabela está no aruqivo balta-database.sql;
 
-CREATE TABLE [student]
-(
-    [Id] UNIQUEIDENTIFIER NOT NULL, --GUID
-    [Name] NVARCHAR(120) NOT NULL,
-    [Email] NVARCHAR(180)  NOT NULL,
-    [Document] NVARCHAR(20)  NOT NULL,
-    [Phone]NVARCHAR(20)  NOT NULL,
-    [Birthdate] DATETIME NOT NULL,
-    [Createdate] DATETIME NOT NULL DEFault(GETDATE()),
-    CONSTRAINT [PK_Student] PRIMARY KEY ([Id])
-);
-GO
+- Instalat extensão Microsoft.admin-pack no Azure DataStudio para utilizar complemento "SQL Server Dacpac" para backup e restore
 
-###################################################################
+##################################################################
+Script para deletar banco
+-----------------------
+USE [master];
 
+DECLARE @kill varchar(8000) = '';  
+SELECT @kill = @kill + 'kill ' + CONVERT(varchar(5), session_id) + ';'  
+FROM sys.dm_exec_sessions
+WHERE database_id  = db_id('Balta')
+
+EXEC(@kill);
+
+DROP DATABASE [Balta]
+##################################################################
+
+- Select com junção de categoria (inner join), dentro de uma View
+-----------------------
+CREATE OR ALTER VIEW vwCourses AS
+    SELECT
+        [Course].[Id],
+        [Course].[Tag],
+        [Course].[Title],
+        [Course].[Url],
+        [Course].[Summary],
+        [Category].[Title] AS [Category],
+        [Author].[Name] AS [Author Name]
+    FROM 
+        [Course]
+        INNER JOIN [Category] ON [Course].[CategoryId] = [Category].[Id]
+        INNER JOIN [Author] ON [Course].[AuthorId] = [Author].[Id]
+    WHERE
+        [Active] = 1
+--------------------------
+SELECT * FROM [vwCourses] ORDER BY [Tag] DESC
+
+##################################################################
+
+- Select com junção de categoria (inner join), dentro de uma View
+-----------------------
