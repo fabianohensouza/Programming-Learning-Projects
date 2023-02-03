@@ -39,5 +39,25 @@ SELECT * FROM [vwCourses] ORDER BY [Tag] DESC
 
 ##################################################################
 
-- Select com junção de categoria (inner join), dentro de uma View
+- Select com subsconsulta
 -----------------------
+SELECT
+    [Id],
+    [Title],
+    [Url],
+    (SELECT COUNT([CareerId]) FROM [CareerItem] WHERE [CareerItem].[CareerId] = [Id]) AS [Courses]
+FROM
+    [Career]
+
+##################################################################
+
+- Select com contador agrupanto o titulo das carreiras
+-----------------------
+SELECT
+    [Career].[Title],
+    COUNT([Id])
+FROM
+    [Career]
+    INNER JOIN [CareerItem] ON [CareerItem].[CareerId] = [Career].[Id]
+GROUP BY
+    [Career].[Title]
