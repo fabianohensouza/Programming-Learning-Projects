@@ -55,9 +55,137 @@ FROM
 -----------------------
 SELECT
     [Career].[Title],
-    COUNT([Id])
+    [Career].[Url],
+    COUNT([Id]) AS [Courses]
 FROM
     [Career]
     INNER JOIN [CareerItem] ON [CareerItem].[CareerId] = [Career].[Id]
 GROUP BY
-    [Career].[Title]
+    [Career].[Title],
+    [Career].[Url]
+
+##################################################################
+
+- Inserindo aluno e curso atribuído ao aluno com ID gerado por GUID
+-----------------------
+DECLARE @studentId UNIQUEIDENTIFIER = (SELECT NEWID())
+
+INSERT INTO 
+    [Student] ([Id], [Name], [Email], [Document], [Phone], [Birthdate], [CreateDate])
+VALUES (
+    @studentId,
+    'Fabiano Souza',
+    'Fabiano@Souza.com',
+    '1212309',
+    '31-31659878',
+    '1980-05-28',
+    GETDATE()
+)
+
+INSERT INTO 
+    [StudentCourse] ([CourseId], [StudentId], [Progress], [Favorite], [StartDate], [LastUpdateDate])
+VALUES (
+    '5e4bf896-7c21-3e47-b9da-208300000000',
+    @studentId,
+    50,
+    0,
+    '2023-01-05 20:35:00',
+    GETDATE()
+)
+
+##################################################################
+
+- Select no ALuno para ver o progresso dos cursos com INNET JOIN
+-----------------------
+DECLARE @StudentId UNIQUEIDENTIFIER = '91dc7d61-802e-4320-9470-86a0a89c8bc8'
+
+SELECT 
+    [Student].[Name],
+    [Student].[Email],
+    [Course].[Title] AS [Course],
+    [Course].[Url],
+    [StudentCourse].[Progress],
+    [StudentCourse].[LastUpdateDate]
+FROM
+    [StudentCourse]
+    INNER JOIN [Student] ON [StudentCourse].[StudentId] = [Student].[Id]
+    INNER JOIN [Course] ON [StudentCourse].[CourseId] = [Course].[Id]
+WHERE
+    [StudentCourse].[StudentId] = @StudentId
+    AND [StudentCourse].[Progress] < 100
+    AND [StudentCourse].[Progress] > 0
+ORDER BY
+    [StudentCourse].[LastUpdateDate]
+
+##################################################################
+
+- Select para ver o progresso dos cursos com LEFT JOIN
+-----------------------
+
+    SELECT 
+    [Course].[Title] AS [Course],
+    [Course].[Url],
+    [Student].[Name],
+    [Student].[Email],
+    [StudentCourse].[Progress],
+    [StudentCourse].[LastUpdateDate]
+FROM
+    [Course]
+    LEFT JOIN [StudentCourse] ON [StudentCourse].[CourseId] = [Course].[Id]
+    LEFT JOIN [Student] ON [StudentCourse].[StudentId] = [Student].[Id]    
+
+##################################################################
+
+- Criando Store Procedure para ver o progresso dos cursos com INNET JOIN
+-----------------------
+CREATE OR ALTER PROCEDURE spStudentProgress (
+    @StudentId UNIQUEIDENTIFIER
+)
+AS
+    SELECT 
+        [Student].[Name],
+        [Student].[Email],
+        [Course].[Title] AS [Course],
+        [Course].[Url],
+        [StudentCourse].[Progress],
+        [StudentCourse].[LastUpdateDate]
+    FROM
+        [StudentCourse]
+        INNER JOIN [Student] ON [StudentCourse].[StudentId] = [Student].[Id]
+        INNER JOIN [Course] ON [StudentCourse].[CourseId] = [Course].[Id]
+    WHERE
+        [StudentCourse].[StudentId] = @StudentId
+        AND [StudentCourse].[Progress] < 100
+        AND [StudentCourse].[Progress] > 0
+    ORDER BY
+        [StudentCourse].[LastUpdateDate]
+
+-----------------------
+- Executando Store Procedure
+-----------------------
+EXEC spStudentProgress '91dc7d61-802e-4320-9470-86a0a89c8bc8'
+
+##################################################################
+
+- Criando Store Procedure para excluis contas
+-----------------------
+CREATE OR ALTER PROCEDURE spDeleteStudent (
+    @StudentId UNIQUEIDENTIFIER
+)
+AS
+    BEGIN TRANSACTION
+        DELETE FROM 
+            [StudentCourse] 
+        WHERE 
+            [StudentId] = @StudentId
+
+        DELETE FROM 
+            [Student] 
+        WHERE 
+            [Id] = @StudentId
+    COMMIT
+
+-----------------------
+- Executando Store Procedure
+-----------------------
+EXEC spDeleteStudent '91dc7d61-802e-4320-9470-86a0a89c8bc8'
