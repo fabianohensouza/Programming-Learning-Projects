@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using Dapper;
 using DataAccess.Models;
 using Microsoft.Data.SqlClient;
@@ -39,9 +40,10 @@ namespace DataAccess // Note: actual namespace depends on the project name.
             using (var connection = new SqlConnection(connectionString))
             {
                 //UpdateCategory(connection);
-                CreateManyCategory(connection);
-                ListCategories(connection);
-                //CreateCategory(connection);
+                //CreateManyCategory(connection);
+                //ListCategories(connection);
+                //CreateCategory(connection);                
+                ExecuteProcedure(connection);
             }
         }
 
@@ -156,5 +158,18 @@ namespace DataAccess // Note: actual namespace depends on the project name.
             });
             Console.WriteLine($"{rows} linhas inseridas.");
         }
+
+        static void ExecuteProcedure(SqlConnection connection)
+        {
+            var procedure = "[spDeleteStudent]"; //Without the command 'EXEC' and yhe function parameter
+            var pars = new { StudentId = "79b82071-80a8-4e78-a79c-92c8cd1fd052" };
+            var affectedRows = connection.Execute(
+                procedure,
+                pars,
+                commandType: CommandType.StoredProcedure);
+
+            Console.WriteLine($"{affectedRows} linhas afetadas.");
+        }
+
     }
 }
