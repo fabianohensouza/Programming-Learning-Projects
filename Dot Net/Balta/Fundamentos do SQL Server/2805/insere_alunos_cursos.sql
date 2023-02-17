@@ -6,8 +6,8 @@ INSERT INTO
     [Student]
 VALUES (
     '79b82071-80a8-4e78-a79c-92c8cd1fd052',
-    'André Baltieri',
-    'hello@balta.io',
+    'Fabiano Souza',
+    'fsouza@balta.io',
     '12345678901',
     '12345678',
     NULL,

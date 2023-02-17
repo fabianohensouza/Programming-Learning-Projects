@@ -43,7 +43,8 @@ namespace DataAccess // Note: actual namespace depends on the project name.
                 //CreateManyCategory(connection);
                 //ListCategories(connection);
                 //CreateCategory(connection);                
-                ExecuteProcedure(connection);
+                //ExecuteProcedure(connection);              
+                ExecuteReadProcedure(connection);
             }
         }
 
@@ -169,6 +170,21 @@ namespace DataAccess // Note: actual namespace depends on the project name.
                 commandType: CommandType.StoredProcedure);
 
             Console.WriteLine($"{affectedRows} linhas afetadas.");
+        }
+
+        static void ExecuteReadProcedure(SqlConnection connection)
+        {
+            var procedure = "[spGetCoursesByCategory]"; //Without the command 'EXEC' and yhe function parameter
+            var pars = new { CategoryId = "25d510c8-3108-44c2-86c5-924d9832aa8c" };
+            var courses = connection.Query<Category>(
+                procedure,
+                pars,
+                commandType: CommandType.StoredProcedure);
+
+            foreach (var item in courses)
+            {
+                Console.WriteLine($"{item.Id} - {item.Title}");
+            }
         }
 
     }
