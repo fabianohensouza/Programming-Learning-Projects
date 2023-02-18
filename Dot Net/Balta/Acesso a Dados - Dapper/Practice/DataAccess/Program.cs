@@ -44,7 +44,10 @@ namespace DataAccess // Note: actual namespace depends on the project name.
                 //ListCategories(connection);
                 //CreateCategory(connection);                
                 //ExecuteProcedure(connection);              
-                ExecuteReadProcedure(connection);
+                //ExecuteReadProcedure(connection);           
+                //ExecuteScalar(connection);
+                //ReadView(connection);
+                OneToOne(connection);
             }
         }
 
@@ -187,5 +190,74 @@ namespace DataAccess // Note: actual namespace depends on the project name.
             }
         }
 
+        static void ExecuteScalar(SqlConnection connection)
+        {
+            var category = new Category();
+
+            category.Title = "Amazon AWS";
+            category.Url = "amazon-aws2";
+            category.Summary = "Amazon Web Service2";
+            category.Order = 8;
+            category.Description = "Treinamento Amazon Aws2";
+            category.Featured = false;
+
+            var insertSql = $@"INSERT  
+                                [Category]
+                            OUTPUT inserted.[Id] 
+                            VALUES (
+                                NEWID(), 
+                                @Title, 
+                                @Url, 
+                                @Summary, 
+                                @Order,
+                                @Description, 
+                                @Featured) ";
+
+            //Execute is used to Insert, Update and Delet operations
+            var id = connection.ExecuteScalar<Guid>(insertSql, new
+            {
+                category.Title,
+                category.Url,
+                category.Summary,
+                category.Order,
+                category.Description,
+                category.Featured
+            });
+            Console.WriteLine($"Id da categoria: {id}.");
+        }
+
+        static void ReadView(SqlConnection connection)
+        {
+            var sql = "SELECT * FROM [vwCourses]";
+            var courses = connection.Query(sql);
+            foreach (var item in courses)
+            {
+                Console.WriteLine($"{item.Id} - {item.Title}");
+            }
+        }
+
+        static void OneToOne(SqlConnection connection)
+        {
+            var sql = @"
+                SELECT 
+                    * 
+                FROM 
+                    [CareerItem] 
+                INNER JOIN 
+                    [Course] ON [CareerItem].[CourseId] = [Course].[Id]";
+
+            var items = connection.Query<CareerItem, Course, CareerItem>(
+                sql,
+                (careerItem, course) =>
+                {
+                    careerItem.Course = course;
+                    return careerItem;
+                }, splitOn: "Id");
+
+            foreach (var item in items)
+            {
+                Console.WriteLine($"{item.Title} - Curso: {item.Course.Title}");
+            }
+        }
     }
 }
