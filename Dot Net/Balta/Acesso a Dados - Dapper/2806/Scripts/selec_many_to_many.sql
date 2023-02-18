@@ -8,4 +8,4 @@ FROM
 INNER JOIN 
     [CareerItem] ON [CareerItem].[CareerId] = [Career].[Id]
 ORDER BY
-    [Career].[Title]
+    [Career].[Title] 
