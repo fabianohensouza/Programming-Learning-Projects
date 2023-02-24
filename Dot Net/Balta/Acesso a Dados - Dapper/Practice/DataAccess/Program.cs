@@ -39,16 +39,22 @@ namespace DataAccess // Note: actual namespace depends on the project name.
 
             using (var connection = new SqlConnection(connectionString))
             {
-                //UpdateCategory(connection);
-                //CreateManyCategory(connection);
-                //ListCategories(connection);
-                //CreateCategory(connection);                
-                //ExecuteProcedure(connection);              
-                //ExecuteReadProcedure(connection);           
-                //ExecuteScalar(connection);
-                //ReadView(connection);
-                //OneToOne(connection);
-                OneToMany(connection);
+                // CreateCategory(connection);
+                // CreateManyCategory(connection);
+                // UpdateCategory(connection);
+                // DeleteCategory(connection);
+                // ListCategories(connection);
+                // GetCategory(connection);
+                // ExecuteProcedure(connection);
+                // ExecuteReadProcedure(connection);
+                // ExecuteScalar(connection);
+                // ReadView(connection);
+                // OneToOne(connection);
+                // OneToMany(connection);
+                // QueryMutiple(connection);
+                // SelectIn(connection);
+                Like(connection, "end");
+                // Transaction(connection);
             }
         }
 
