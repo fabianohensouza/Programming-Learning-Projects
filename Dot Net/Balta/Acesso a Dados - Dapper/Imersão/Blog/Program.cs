@@ -22,8 +22,8 @@ namespace Blog // Note: actual namespace depends on the project name.
             //UpdateUser();
             //DeleteUser();
             ReadUsers(connection);
-            ReadRoles(connection);
-            ReadTags(connection);
+            //ReadRoles(connection);
+            //ReadTags(connection);
 
             connection.Close();
         }
@@ -32,13 +32,18 @@ namespace Blog // Note: actual namespace depends on the project name.
         public static void ReadUsers(SqlConnection connection)
         {
 
-            var repository = new Repository<User>(connection);
-            var users = repository.Get();
+            var repository = new UserRepository(connection);
+            var items = repository.GetWithRoles();
 
-            foreach (var user in users)
-                Console.WriteLine(user.Name);
+            foreach (var item in items)
+            {
+                Console.Write(item.Name);
+                foreach (var role in item.Roles)
+                {
+                    Console.WriteLine($" - {role.Name}");
+                }
+            }
         }
-
 
         public static void ReadRoles(SqlConnection connection)
         {

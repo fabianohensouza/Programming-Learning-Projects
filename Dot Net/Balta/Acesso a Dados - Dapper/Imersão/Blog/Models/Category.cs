@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Dapper.Contrib.Extensions;
 
 namespace Blog.Models
