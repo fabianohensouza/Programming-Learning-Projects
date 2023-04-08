@@ -8,7 +8,10 @@ namespace Blog
         {
             Console.WriteLine("Hello World!");
 
-            var ctx = new Data.BlogDataContext();
+            using (var ctx = new Data.BlogDataContext())
+            {
+
+            }
         }
     }
 }
