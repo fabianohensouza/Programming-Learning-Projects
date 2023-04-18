@@ -1,4 +1,5 @@
 ﻿using System;
+using Blog.Models;
 
 namespace Blog
 {
@@ -6,11 +7,13 @@ namespace Blog
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Console.WriteLine("Hello World!");
 
-            using (var ctx = new Data.BlogDataContext())
+            using (var context = new Data.BlogDataContext())
             {
-
+                var tag = new Tag { Name = "ASP.NET", Slug = "asp-net" };
+                context.Tags.Add(tag);
+                context.SaveChanges();
             }
         }
     }
