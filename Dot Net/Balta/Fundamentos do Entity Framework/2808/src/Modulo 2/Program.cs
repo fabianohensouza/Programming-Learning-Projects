@@ -24,24 +24,24 @@ namespace Blog
             // });
             // context.SaveChanges();
 
-            var user = context.Users.FirstOrDefault();
-            var post = new Post
-            {
-                Author = user,
-                Category = new Category
-                {
-                    Name = "FrontEnd",
-                    Slug = "frontend"
-                },
-                Body = "Meu artigo2",
-                Slug = "meu-artigo2",
-                Summary = "Neste segundo artigo vamos conferir",
-                Title = "Meu Segundo Artigo",
-                CreateDate = DateTime.Now,
-            };
+            // var user = context.Users.FirstOrDefault();
+            // var post = new Post
+            // {
+            //     Author = user,
+            //     Category = new Category
+            //     {
+            //         Name = "FrontEnd",
+            //         Slug = "frontend"
+            //     },
+            //     Body = "Meu artigo2",
+            //     Slug = "meu-artigo2",
+            //     Summary = "Neste segundo artigo vamos conferir",
+            //     Title = "Meu Segundo Artigo",
+            //     CreateDate = DateTime.Now,
+            // };
 
-            context.Posts.Add(post);
-            context.SaveChanges();
+            // context.Posts.Add(post);
+            // context.SaveChanges();
         }
     }
 }
