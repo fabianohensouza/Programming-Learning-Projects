@@ -22,26 +22,31 @@ namespace Blog
             //     Image = "https://imagesab.jpg",
             //     PasswordHash = "12345678"
             // });
-            // context.SaveChanges();
+            context.SaveChanges();
 
-            // var user = context.Users.FirstOrDefault();
-            // var post = new Post
-            // {
-            //     Author = user,
-            //     Category = new Category
-            //     {
-            //         Name = "FrontEnd",
-            //         Slug = "frontend"
-            //     },
-            //     Body = "Meu artigo2",
-            //     Slug = "meu-artigo2",
-            //     Summary = "Neste segundo artigo vamos conferir",
-            //     Title = "Meu Segundo Artigo",
-            //     CreateDate = DateTime.Now,
-            // };
+            var user = context.Users?
+                .AsNoTracking()
+                .Skip(0)
+                .Take(50)
+                .ToList();
 
-            // context.Posts.Add(post);
-            // context.SaveChanges();
+            var post = new Post
+            {
+                Author = user,
+                Category = new Category
+                {
+                    Name = "FrontEnd",
+                    Slug = "frontend"
+                },
+                Body = "Meu artigo2",
+                Slug = "meu-artigo2",
+                Summary = "Neste segundo artigo vamos conferir",
+                Title = "Meu Segundo Artigo",
+                CreateDate = DateTime.Now,
+            };
+
+            context.Posts.Add(post);
+            context.SaveChanges();
         }
     }
 }
