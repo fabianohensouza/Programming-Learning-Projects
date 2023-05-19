@@ -16,11 +16,11 @@ namespace Blog.Controllers
             try
             {
                 var categories = await context.Categories.ToListAsync();
-                return Ok(categories);
+                return Ok(new ResultViewModel<List<Category>>(categories));
             }
-            catch (Exception ex)
+            catch
             {
-                return StatusCode(500, "05XE08 - Falha interna");
+                return StatusCode(500, new ResultViewModel<List<Category>>("05XE08 - Falha interna"));
             }
         }
 
@@ -36,22 +36,26 @@ namespace Blog.Controllers
                                  .FirstOrDefaultAsync(x => x.Id == id);
 
                 if (category == null)
-                    return NotFound();
+                    return NotFound(new ResultViewModel<List<Category>>("05XE05 - Conteúdo não encontrado"));
 
-                return Ok(category);
+                return Ok(new ResultViewModel<Category>(category));
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "05XE07 - Falha interna");
+                return StatusCode(500, new ResultViewModel<List<Category>>("05XE07 - Falha interna"));
             }
             
         }
 
         [HttpPost("v1/categories")]
         public async Task<ActionResult> PostAsync(
-            [FromBody] CreateCategoryViewModel model,
+            [FromBody] EditorCategoryViewModel model,
             [FromServices] BlogDataContext context)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
             try
             {
                 var category = new Category 
@@ -79,7 +83,7 @@ namespace Blog.Controllers
 
         [HttpPut("v1/categories/{id:int}")]
         public async Task<ActionResult> PutAsync(
-            [FromBody] CreateCategoryViewModel model,
+            [FromBody] EditorCategoryViewModel model,
             [FromRoute] int id,
             [FromServices] BlogDataContext context)
         {          
@@ -93,7 +97,7 @@ namespace Blog.Controllers
                     return NotFound();
 
                 category.Name = model.Name;
-                category.Slug = model.Slug;
+                category.Slug = model.Slug.ToLower();
 
                 context.Categories.Update(category);
                 await context.SaveChangesAsync();
