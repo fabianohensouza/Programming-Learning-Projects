@@ -1,4 +1,5 @@
 ﻿using Blog.Data;
+using Blog.Extensions;
 using Blog.Models;
 using Blog.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -54,7 +55,7 @@ namespace Blog.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest();
+                return BadRequest(new ResultViewModel<List<Category>>(ModelState.GetErrors()));
             }
             try
             {
@@ -69,15 +70,15 @@ namespace Blog.Controllers
                 await context.Categories.AddAsync(category);
                 await context.SaveChangesAsync();
 
-                return Created($"v1/categories/{category.Id}", category);
+                return Created($"v1/categories/{category.Id}", new ResultViewModel<Category>(category));
             }
             catch (DbUpdateException ex)
             {
-                return StatusCode(500, "05XE09 - Não foi possível incluir a categoria");
+                return StatusCode(500, new ResultViewModel<Category>("05XE09 - Não foi possível incluir a categoria"));
             }
-            catch (Exception ex)
+            catch
             {
-                return StatusCode(500, "05XE10 - Falha interna");
+                return StatusCode(500, new ResultViewModel<Category>("05XE10 - Falha interna"));
             }
         }
 
@@ -94,7 +95,7 @@ namespace Blog.Controllers
                                  .FirstOrDefaultAsync(x => x.Id == id);
 
                 if (category == null)
-                    return NotFound();
+                    return NotFound(new ResultViewModel<Category>("05XE04 - Conteúdo não encontrado"));
 
                 category.Name = model.Name;
                 category.Slug = model.Slug.ToLower();
@@ -106,11 +107,11 @@ namespace Blog.Controllers
             }
             catch (DbUpdateException ex)
             {
-                return StatusCode(500, "05XE11 - Não foi possível alterar a categoria");
+                return StatusCode(500, new ResultViewModel<Category>("05XE11 - Não foi possível alterar a categoria"));
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "05XE12 - Falha interna");
+                return StatusCode(500, new ResultViewModel<Category>("05XE12 - Falha interna"));
             }
         }
 
@@ -126,7 +127,7 @@ namespace Blog.Controllers
                                      .FirstOrDefaultAsync(x => x.Id == id);
 
                 if (category == null)
-                    return NotFound();
+                    return NotFound(new ResultViewModel<Category>("05XE03 - Conteúdo não encontrado"));
 
                 context.Categories.Remove(category);
                 await context.SaveChangesAsync();
@@ -135,11 +136,11 @@ namespace Blog.Controllers
             }
             catch (DbUpdateException ex)
             {
-                return StatusCode(500, "05XE13 - Não foi possível excluir a categoria");
+                return StatusCode(500, new ResultViewModel<Category>("05XE13 - Não foi possível excluir a categoria"));
             }
             catch (Exception ex)
             {
-                return StatusCode(500, "05XE14 - Falha interna");
+                return StatusCode(500, new ResultViewModel<Category>("05XE14 - Falha interna"));
             }
         }
     }
