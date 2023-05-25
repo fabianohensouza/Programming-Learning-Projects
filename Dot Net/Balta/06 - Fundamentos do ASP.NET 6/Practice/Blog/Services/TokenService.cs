@@ -18,6 +18,7 @@ namespace Blog.Services
                 {
                     new (ClaimTypes.Name, "fabianosouza"),  //User.Identity.Name
                     new (ClaimTypes.Role, "admin"),  //User.IsInRole("admin")
+                    new (ClaimTypes.Role, "user"),  //User.IsInRole("user")
                     new ("fruta", "banana")
                 }),
                 Expires = DateTime.UtcNow.AddHours(8),

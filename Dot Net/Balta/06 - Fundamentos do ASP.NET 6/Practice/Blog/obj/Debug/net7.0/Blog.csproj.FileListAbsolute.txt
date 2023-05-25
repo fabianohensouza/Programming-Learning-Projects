@@ -8,6 +8,7 @@ C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot N
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Humanizer.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
@@ -68,4 +69,3 @@ C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot N
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\obj\Debug\net7.0\Blog.pdb
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\obj\Debug\net7.0\Blog.genruntimeconfig.cache
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\obj\Debug\net7.0\ref\Blog.dll
-C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
