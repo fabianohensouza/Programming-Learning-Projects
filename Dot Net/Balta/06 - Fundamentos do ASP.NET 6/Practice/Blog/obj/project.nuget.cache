@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "btpFAitONGaZ5tM288FOo1BRH1xASGna73BZPAFX3Qzj9jQf6VfQSc1Y+0cOohFV2yFVSc2BepYE2DPWO9DTHg==",
+  "dgSpecHash": "1ZMaS9QGU00XQgED77zmFk9KA2QOuiq2iDBCA2whqKT0+/03h28PbSDYmip0f+DlXanmQrnpAce3aA10lm5PIA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\Blog.csproj",
   "expectedPackageFiles": [
@@ -60,6 +60,7 @@
     "C:\\Users\\Fabiano\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Fabiano\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\Fabiano\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Fabiano\\.nuget\\packages\\secureidentity\\1.0.4\\secureidentity.1.0.4.nupkg.sha512",
     "C:\\Users\\Fabiano\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Fabiano\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\Fabiano\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",
