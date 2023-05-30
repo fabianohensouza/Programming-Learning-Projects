@@ -1,6 +1,7 @@
 *.lock
 *.sh
 *.pdf
+*.json
 
 # Compiled source #
 ###################
