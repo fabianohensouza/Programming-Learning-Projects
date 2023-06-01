@@ -3,9 +3,12 @@ using Blog.Extensions;
 using Blog.Models;
 using Blog.Services;
 using Blog.ViewModels;
+using Blog.ViewModels.Accounts;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SecureIdentity.Password;
+using System.Text.RegularExpressions;
 
 namespace Blog.Controllers
 {
@@ -80,6 +83,48 @@ namespace Blog.Controllers
             {
                 var token = tokenService.GenerateToken(user);
                 return Ok(new ResultViewModel<string>(token, null));
+            }
+            catch
+            {
+                return StatusCode(500, new ResultViewModel<string>("Falha interna"));
+            }
+        }
+
+        [Authorize]
+        [HttpPost("v1/accounts/upload-image")]
+        public async Task<IActionResult> UploadImage(
+            [FromBody] UploadImageViewModel model,
+            [FromServices] BlogDataContext context)
+        {
+            var fileName = $"{Guid.NewGuid().ToString()}.jpg";
+            var data = new Regex(@"^data:image\/[a-z]+;base64,")
+                .Replace(model.Base64Image, "");
+            var bytes = Convert.FromBase64String(data);
+
+            try
+            {
+                var fullFilePath = $"wwwroot/images/{fileName}";
+                await System.IO.File.WriteAllBytesAsync(fullFilePath, bytes);
+                return Ok(new ResultViewModel<string>(fullFilePath, null));
+            }
+            catch
+            {
+                return StatusCode(500, new ResultViewModel<string>("Falha interna"));
+            }
+
+            var user = await context
+                .Users
+                .FirstOrDefaultAsync(x => x.Email == User.Identity.Name);
+
+            if (user == null)
+                return NotFound(new ResultViewModel<User>("Usuário não encontrado"));
+
+            user.Image = $"https://localhost:7007/images/{fileName}";
+
+            try
+            {
+                context.Update(user);
+                context.SaveChanges();
             }
             catch
             {

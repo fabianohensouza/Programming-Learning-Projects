@@ -1,8 +1,11 @@
-C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Blog.exe
-C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Blog.dll
-C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Blog.pdb
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\appsettings.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Blog.staticwebassets.runtime.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Blog.exe
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Blog.deps.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Blog.runtimeconfig.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Blog.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Blog.pdb
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Humanizer.dll
@@ -66,7 +69,5 @@ C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot N
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\obj\Debug\net7.0\Blog.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\obj\Debug\net7.0\refint\Blog.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\obj\Debug\net7.0\Blog.pdb
-C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Blog.deps.json
-C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\bin\Debug\net7.0\Blog.runtimeconfig.json
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\obj\Debug\net7.0\Blog.genruntimeconfig.cache
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Blog\obj\Debug\net7.0\ref\Blog.dll
