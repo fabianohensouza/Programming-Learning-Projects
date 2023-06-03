@@ -97,8 +97,8 @@ namespace Blog.Controllers
             [FromServices] BlogDataContext context)
         {
             var fileName = $"{Guid.NewGuid().ToString()}.jpg";
-            var data = new Regex(@"^data:image\/[a-z]+;base64,")
-                .Replace(model.Base64Image, "");
+            var data = new Regex(@"^data:image\/[a-z]+;base64,").
+                Replace(model.Base64Image, "");
             var bytes = Convert.FromBase64String(data);
 
             try

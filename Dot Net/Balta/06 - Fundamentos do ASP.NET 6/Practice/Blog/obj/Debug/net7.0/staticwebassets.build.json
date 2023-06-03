@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZM9O7Z2D+HbsCUQ/Bgk2nxkhOYDxFkvoOmii85K4Rpo=",
+  "Hash": "1yaR4G6rUhGk6QIMDXQ/xxwRSUPS15TrOuDbmpWiAMg=",
   "Source": "Blog",
   "BasePath": "_content/Blog",
   "Mode": "Default",
@@ -15,5 +15,23 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\wwwroot\\images\\2c48c25a-cc5c-4e3e-ad90-1309000acd39.jpg",
+      "SourceId": "Blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\wwwroot\\",
+      "BasePath": "_content/Blog",
+      "RelativePath": "images/2c48c25a-cc5c-4e3e-ad90-1309000acd39.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\2c48c25a-cc5c-4e3e-ad90-1309000acd39.jpg"
+    }
+  ]
 }
