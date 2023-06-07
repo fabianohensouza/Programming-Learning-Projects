@@ -1,0 +1,7 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Dotnet 5\Blog\obj\Debug\net5.0\Blog.csproj.AssemblyReference.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Dotnet 5\Blog\obj\Debug\net5.0\Blog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Dotnet 5\Blog\obj\Debug\net5.0\Blog.AssemblyInfoInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Dotnet 5\Blog\obj\Debug\net5.0\Blog.AssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Dotnet 5\Blog\obj\Debug\net5.0\Blog.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Dotnet 5\Blog\obj\Debug\net5.0\Blog.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\06 - Fundamentos do ASP.NET 6\Practice\Dotnet 5\Blog\obj\Debug\net5.0\Blog.MvcApplicationPartsAssemblyInfo.cache
