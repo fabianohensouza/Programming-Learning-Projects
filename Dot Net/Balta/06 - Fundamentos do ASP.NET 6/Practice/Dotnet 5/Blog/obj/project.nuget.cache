@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "j+qFN+XaA1p/7nFhK93GdY8hr+pKd4Gc93/xwkLarnpRoIPO7E34ao2ytewpuNsV50iV3DmUi2rZTtgGnB7mgQ==",
+  "dgSpecHash": "PB+eqoV9MCr8b4EeSWQsaP/udplIu1x5notvLGaIur8oMK9PkMoyi0V+9TzXKLsdgUwgJhyMkuEN09SCHYs96g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Dotnet 5\\Blog\\Blog.csproj",
+  "projectFilePath": "c:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Dotnet 5\\Blog\\Blog.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fabiano\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Fabiano\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

@@ -1,26 +1,26 @@
 {
-        "user": "batman@gmail.io",
-        "password": "yft9nbR!fLcVORV$o$J9koP{B"
-    }
+    "user": "batman@gmail.io",
+    "password": "yft9nbR!fLcVORV$o$J9koP{B"
+}
 
 {
-        "user": "hulk@gmail.io",
-        "password": "b#om%EaM)o@4WTK)rNu3sIpGs"
-    }
-
-
-{
-        "user": "ww@gmail.io",
-        "password": "72aXRyuo3aW9bj)t{]L(5M4Hv"
-    }
+    "user": "hulk@gmail.io",
+    "password": "b#om%EaM)o@4WTK)rNu3sIpGs"
+}
 
 
 {
-        "user": "ironman@gmail.io",
-        "password": "ynF(7A9Ur4ZZNPbtXj;HvC8Sv"
-    }
+    "user": "ww@gmail.io",
+    "password": "72aXRyuo3aW9bj)t{]L(5M4Hv"
+}
+
 
 {
-        "user": "spiderman@gmail.io",
-        "password": "mFK29Aˆ)nO;BtW*;*JU3Aeh2c"
-    }
+    "user": "ironman@gmail.io",
+    "password": "ynF(7A9Ur4ZZNPbtXj;HvC8Sv"
+}
+
+{
+    "user": "spiderman@gmail.io",
+    "password": "mFK29Aˆ)nO;BtW*;*JU3Aeh2c"
+}
