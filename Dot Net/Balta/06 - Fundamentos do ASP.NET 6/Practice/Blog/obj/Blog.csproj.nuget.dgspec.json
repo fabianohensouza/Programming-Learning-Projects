@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\Blog.csproj": {}
+    "c:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\Blog.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\Blog.csproj": {
+    "c:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\Blog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\Blog.csproj",
+        "projectUniqueName": "c:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\Blog.csproj",
         "projectName": "Blog",
-        "projectPath": "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\Blog.csproj",
+        "projectPath": "c:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\Blog.csproj",
         "packagesPath": "C:\\Users\\Fabiano\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\obj\\",
+        "outputPath": "c:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\06 - Fundamentos do ASP.NET 6\\Practice\\Blog\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Fabiano\\AppData\\Roaming\\NuGet\\NuGet.Config",
