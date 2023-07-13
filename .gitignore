@@ -24,6 +24,8 @@
 *.rar
 *.tar
 *.zip
+*.sln
+/.vscode
 
 # Logs and databases #
 ######################
