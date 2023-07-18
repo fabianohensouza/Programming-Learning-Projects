@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SMxdTZkibQug2/5/J+o0jSkH3io3ipCC9c8iCpVqqmNAeXHGBPaY0KWb7pm58XlvHWTcPcRJ+D5s7+i9PrxGjw==",
+  "dgSpecHash": "/nTU44hR+MCsYvgiKweCLrAT9odO8seHvWkgJFhXmBwvKjs0dmRg6wcoEkryUsVRGh95fIo5ZDk8LrBUwhveuA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\08 - Modelando Domínios Ricos\\Practice\\PaymentContext\\PaymentContext.Tests\\PaymentContext.Tests.csproj",
+  "projectFilePath": "c:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\08 - Modelando Domínios Ricos\\Practice\\PaymentContext\\PaymentContext.Tests\\PaymentContext.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fabiano\\.nuget\\packages\\coverlet.collector\\3.2.0\\coverlet.collector.3.2.0.nupkg.sha512",
     "C:\\Users\\Fabiano\\.nuget\\packages\\microsoft.codecoverage\\17.5.0\\microsoft.codecoverage.17.5.0.nupkg.sha512",

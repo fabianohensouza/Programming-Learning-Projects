@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PaymentContext.Tests
-build_property.ProjectDir = C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\08 - Modelando Domínios Ricos\Practice\PaymentContext\PaymentContext.Tests\
+build_property.ProjectDir = c:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\08 - Modelando Domínios Ricos\Practice\PaymentContext\PaymentContext.Tests\
