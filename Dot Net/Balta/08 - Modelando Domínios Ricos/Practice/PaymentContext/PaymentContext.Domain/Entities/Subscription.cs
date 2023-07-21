@@ -13,15 +13,25 @@ namespace PaymentContext.Domain.Entities
             _payments = new List<Payment>();
         }
 
-        public DateTime CreateDate { get; set; }
-        public DateTime LastUpdateDate { get; set; }
-        public DateTime? ExpireDate { get; set; }
-        public bool Active { get; set; }
+        public DateTime CreateDate { get; private set; }
+        public DateTime LastUpdateDate { get; private set; }
+        public DateTime? ExpireDate { get; private set; }
+        public bool Active { get; private set; }
         public IReadOnlyCollection<Payment> Payments { get { return _payments.ToArray(); } }
 
         public void AddPayment(Payment payment)
         {
             _payments.Add(payment);
+        }
+
+        public void Activate(bool status = true)
+        {
+            if (status)
+                Active = true;
+            else
+                Active = false;
+
+            LastUpdateDate = DateTime.Now;
         }
     }
 }
