@@ -1,3 +1,4 @@
+using Flunt.Validations;
 using PaymentContext.Domain.ValueObjects;
 using PaymentContext.Shared.Entities;
 
@@ -25,10 +26,15 @@ namespace PaymentContext.Domain.Entities
 
         public void AddSubscription(Subscription subscription)
         {
+            var hasSubscriptionActive = false;
             foreach (var sub in Subscriptions)
-                sub.Activate(false);
+            {
+                if (sub.Active)
+                    hasSubscriptionActive = true;
+            }
 
-            _subscriptions.Add(subscription);
+            if (hasSubscriptionActive)
+                AddNotification("Student.Subscriptions", "Já existe uma subscrição ativa");
         }
     }
 }
