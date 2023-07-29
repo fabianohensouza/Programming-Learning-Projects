@@ -1,9 +1,9 @@
 namespace PaymentContext.Tests;
 
-[TestClass]
+//[TestClass]
 public class UnitTest1
 {
-    [TestMethod]
+    //[TestMethod]
     public void TestMethod1()
     {
     }

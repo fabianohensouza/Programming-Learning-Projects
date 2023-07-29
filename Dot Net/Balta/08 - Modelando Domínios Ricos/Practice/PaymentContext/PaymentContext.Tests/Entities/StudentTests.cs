@@ -1,23 +1,32 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PaymentContext.Domain.Entities;
+using PaymentContext.Domain.Enuns;
 using PaymentContext.Domain.ValueObjects;
 
-namespace PaymentContext.Tests.Entities
+namespace PaymentContext.Tests.ValueObjects
 {
     [TestClass]
     public class StudentTests
     {
-        [TestMethod]
-        public void TestMethod1()
-        {
-            // var subscription = new Subscription(null);
-            // var student = new Student("Fabiano", "Souza", "089663565", "fhs@gmail.com");
-            // student.AddSubscription(subscription);
+        //Red, Green, Refactor
 
-            var name = new Name("Teste", "teste");
-            foreach (var not in name.Notifications)
-            {
-                //not.Message;
-            }
+        [TestMethod]
+        public void ShouldReturnErrorWhenHadActiveSubscription()
+        {
+            var name = new Name("Bruce", "Wayne");
+            var document = new Document("01987654321", EDocumentType.CPF);
+            var email = new Email("batman@dc.com");
+
+            var student = new Student(name, document, email);
+            Assert.Fail();
+        }
+
+        [TestMethod]
+        public void ShouldReturnSuccessWhenHadNoActiveSubscription()
+        {
+            Assert.Fail();
         }
     }
 }
+
+//16Min

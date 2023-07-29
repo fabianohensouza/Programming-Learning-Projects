@@ -102,3 +102,4 @@ C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot N
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\08 - Modelando Domínios Ricos\Practice\PaymentContext\PaymentContext.Tests\bin\Debug\net7.0\PaymentContext.Shared.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\08 - Modelando Domínios Ricos\Practice\PaymentContext\PaymentContext.Tests\bin\Debug\net7.0\PaymentContext.Shared.pdb
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\08 - Modelando Domínios Ricos\Practice\PaymentContext\PaymentContext.Tests\bin\Debug\net7.0\PaymentContext.Domain.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\08 - Modelando Domínios Ricos\Practice\PaymentContext\PaymentContext.Tests\bin\Debug\net7.0\Flunt.dll
