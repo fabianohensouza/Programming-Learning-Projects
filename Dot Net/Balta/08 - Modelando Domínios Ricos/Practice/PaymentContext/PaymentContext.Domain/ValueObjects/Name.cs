@@ -19,6 +19,7 @@ namespace PaymentContext.Domain.ValueObjects
 
         public string Firstname { get; private set; }
         public string Lastname { get; private set; }
+        public string FullName { get { return $"{Firstname} {Lastname}"; } }
     }
 }
 //6Min
