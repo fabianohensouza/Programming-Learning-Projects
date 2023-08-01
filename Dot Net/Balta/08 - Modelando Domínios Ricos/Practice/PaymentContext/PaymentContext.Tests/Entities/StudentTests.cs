@@ -58,7 +58,7 @@ namespace PaymentContext.Tests.ValueObjects
         }
 
         [TestMethod]
-        public void ShouldReturnSuccessWhenAddActiveSubscription()
+        public void ShouldReturnSuccessWhenAddSubscription()
         {
             _subscription.AddPayment(_payment);
             _student.AddSubscription(_subscription);
