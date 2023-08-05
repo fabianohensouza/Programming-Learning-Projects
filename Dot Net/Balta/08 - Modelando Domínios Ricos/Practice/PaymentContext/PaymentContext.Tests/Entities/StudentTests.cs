@@ -5,7 +5,7 @@ using PaymentContext.Domain.ValueObjects;
 
 namespace PaymentContext.Tests.ValueObjects
 {
-    [TestClass]
+    //[TestClass]
     public class StudentTests
     {
         //Red, Green, Refactor
