@@ -19,7 +19,11 @@ namespace PaymentContext.Domain.ValueObjects
 
         public string Firstname { get; private set; }
         public string Lastname { get; private set; }
-        public string FullName { get { return $"{Firstname} {Lastname}"; } }
+
+        public override string ToString()
+        {
+            return $"{Firstname} {Lastname}";
+        }
     }
 }
 //6Min

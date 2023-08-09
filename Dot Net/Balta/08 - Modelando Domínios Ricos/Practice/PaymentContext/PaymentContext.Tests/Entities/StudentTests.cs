@@ -34,7 +34,7 @@ namespace PaymentContext.Tests.ValueObjects
                 10,
                 "Wayne Corp",
                 _document,
-                _name.FullName,
+                _name.ToString(),
                 _address,
                 _email);
 
@@ -67,5 +67,3 @@ namespace PaymentContext.Tests.ValueObjects
         }
     }
 }
-
-//16Min
