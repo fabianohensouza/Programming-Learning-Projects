@@ -13,8 +13,8 @@ namespace PaymentContext.Domain.Handlers
     public class SubscriptionHandler :
         Notifiable,
         IHandler<CreateBoletoSubscriptionCommand>,
-        IHandler<CreatePayPalSubscriptionCommand>,
-        IHandler<CreateCreditCardSubscriptionCommand>
+        IHandler<CreateCreditCardSubscriptionCommand>,
+        IHandler<CreatePayPalSubscriptionCommand>
     {
         private readonly IStudentRepository _repository;
         private readonly IEmailService _emailService;
@@ -43,7 +43,6 @@ namespace PaymentContext.Domain.Handlers
                 AddNotification("Email", "Este Email já está em uso");
 
             // Generate the VOs
-
             var name = new Name(command.Firstname, command.Lastname);
             var document = new Document(command.Document, EDocumentType.CPF);
             var email = new Email(command.Email);
@@ -80,6 +79,10 @@ namespace PaymentContext.Domain.Handlers
             // Group the validations
             AddNotifications(name, document, email, address, payment, subscription, student);
 
+            // Check the notifications
+            if (Invalid)
+                return new CommandResult(false, "Não foi possível realizar sua assinatura");
+
             // Save the informations
             _repository.CreateSubscription(student);
 
@@ -92,7 +95,7 @@ namespace PaymentContext.Domain.Handlers
             );
 
             // Return the informations
-            return new CommandResult(true, "Assinatita realizada com sucesso");
+            return new CommandResult(true, "Assinatura realizada com sucesso");
         }
 
         public ICommandResult Handle(CreatePayPalSubscriptionCommand command)

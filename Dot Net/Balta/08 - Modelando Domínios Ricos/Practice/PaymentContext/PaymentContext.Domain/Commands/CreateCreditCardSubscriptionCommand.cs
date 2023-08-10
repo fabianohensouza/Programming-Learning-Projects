@@ -1,8 +1,11 @@
+using Flunt.Notifications;
+using Flunt.Validations;
 using PaymentContext.Domain.Enuns;
+using PaymentContext.Shared.Commands;
 
 namespace PaymentContext.Domain.Commands
 {
-    public class CreateCreditCardSubscriptionCommand
+    public class CreateCreditCardSubscriptionCommand : Notifiable, ICommand
     {
         public string Firstname { get; set; }
         public string Lastname { get; set; }
@@ -27,5 +30,14 @@ namespace PaymentContext.Domain.Commands
         public string State { get; set; }
         public string Country { get; set; }
         public string ZipCode { get; set; }
+
+        public void Validate()
+        {
+            AddNotifications(new Contract()
+                .Requires()
+                .HasMinLen(Firstname, 3, "Name.FirstName", "O Nome deve conter pelo menos 3 letras")
+                .HasMinLen(Lastname, 3, "Name.LastName", "O Sobrenome deve conter pelo menos 3 letras")
+            );
+        }
     }
 }
