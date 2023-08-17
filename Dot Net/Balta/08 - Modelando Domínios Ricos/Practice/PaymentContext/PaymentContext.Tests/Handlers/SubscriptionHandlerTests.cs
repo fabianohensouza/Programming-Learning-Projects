@@ -43,6 +43,9 @@ namespace PaymentContext.Tests.Handlers
             command.ZipCode = "12345689";
             command.BarCode = "65498751362169654657498794";
             command.BoletoNumber = "65498751362169654657498794";
+
+            handler.Handle(command);
+            Assert.AreEqual(false, handler.Valid);
         }
     }
 }//10Min
