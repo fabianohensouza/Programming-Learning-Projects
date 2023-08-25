@@ -1,3 +1,5 @@
+using Store.Domain.Enums;
+
 namespace Store.Domain.Entities
 {
     public class Order : Entity
@@ -24,8 +26,7 @@ namespace Store.Domain.Entities
         public void AddItem(Product product, int quantity)
         {
             var item = new OrderItem(product, quantity);
-            if (item.Valid)
-                Items.Add(item);
+            Items.Add(item);
         }
 
         public decimal Total()
