@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "+8a9u091gM7QojZo5Tp/gpPyINBybC28V/LnqwmL6WhMgIqK3/E6gtfuw3ri+jqtzjC0zzkiARvvi+hEta1sJg==",
+  "dgSpecHash": "Ibk7/ikICA35NQiPyLnuRxRBTM6JYQpRQ4iAn5MFjj/jUQ8UdHGilY+Wx6+j8hpivXe2bbIx9+znaPYgokUdcQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\09 - Refatorando para testes de unidade\\practice\\Store.Domain\\Store.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "c:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\09 - Refatorando para testes de unidade\\practice\\Store.Domain\\Store.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Fabiano\\.nuget\\packages\\flunt\\1.0.3\\flunt.1.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
