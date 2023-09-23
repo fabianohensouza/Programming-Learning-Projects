@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f7DMWdWlcUbITVuYOQ8K4YTJ+DWwfbT61kD1VJv8aTC3rbHGifT46qmr8LB9vmcDUF/9fvblwfdmdtS9oYa4nA==",
+  "dgSpecHash": "Yh3dowQtCGIPhgijNfp6TgWg6hbfq6jnUj9xm/ibvU0I1Mno8XgWMJNiXNAVFGMS2QOJN/StAMK7lgoRqiVwcg==",
   "success": true,
-  "projectFilePath": "c:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\09 - Refatorando para testes de unidade\\practice\\Store.Tests\\Store.Tests.csproj",
+  "projectFilePath": "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\09 - Refatorando para testes de unidade\\practice\\Store.Tests\\Store.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Fabiano\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Fabiano\\.nuget\\packages\\flunt\\1.0.3\\flunt.1.0.3.nupkg.sha512",
