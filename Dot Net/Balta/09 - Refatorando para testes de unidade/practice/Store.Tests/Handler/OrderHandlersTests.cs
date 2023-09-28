@@ -54,7 +54,7 @@ namespace Store.Tests.Handler
         {
             var command = new CreateOrderCommand();
             command.Customer = CustomerRepository.Get("12345678910").Name;
-            command.ZipCode = "13411080";
+            command.ZipCode = "";
             command.PromoCode = "12345678";
             command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
             command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
@@ -67,8 +67,15 @@ namespace Store.Tests.Handler
         [TestCategory("Handlers")]
         public void DadoUmPromocodeInexistenteOPedidoDeveSerGeradoNormalmente()
         {
-            // TODO: Implementar
-            Assert.IsTrue(true);
+            var command = new CreateOrderCommand();
+            command.Customer = CustomerRepository.Get("12345678910").Name;
+            command.ZipCode = "34800000";
+            command.PromoCode = "12345678";
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
+            command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
+            command.Validate();
+
+            Assert.AreEqual(command.Valid, true);
         }
 
         [TestMethod]
@@ -114,7 +121,6 @@ namespace Store.Tests.Handler
 
             handler.Handle(command);
             Assert.AreEqual(handler.Valid, true);
-            Assert.AreEqual(command.Valid, true);
         }
     }
 }

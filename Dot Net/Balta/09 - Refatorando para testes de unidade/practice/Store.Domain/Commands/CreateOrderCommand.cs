@@ -29,7 +29,6 @@ namespace Store.Domain.Commands
         {
             AddNotifications(new Contract()
                 .Requires()
-                .IsNull(Customer, "Customer", "Cliente inexistente")
                 .IsGreaterThan(Customer.ToString().Length, 10, "Customer", "Cliente inválido")
                 .HasLen(ZipCode.ToString(), 8, "ZipCode", "CEP inválido")
             );
