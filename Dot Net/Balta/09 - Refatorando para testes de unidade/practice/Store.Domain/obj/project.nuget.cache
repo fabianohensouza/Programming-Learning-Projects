@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9VkWusStUI83DkQp1i7gBbBlOGJANIscXp/VWNBop1qmYEqFtc+ZNrO61WZ2N/Shjy8KvxYfb6NE/e+1zEWhjw==",
+  "dgSpecHash": "+yqnvCY7Y0wTegesKzOtV91c07CRxydyTxiP8JeY6zP5YazNZ6Jkmbrtngcgibfo4l+TcBm8Sa10RcaaUD3VpQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fabiano\\Documents\\MEGAsync\\Projetos\\Programming-Learning-Projects\\Dot Net\\Balta\\09 - Refatorando para testes de unidade\\practice\\Store.Domain\\Store.Domain.csproj",
   "expectedPackageFiles": [

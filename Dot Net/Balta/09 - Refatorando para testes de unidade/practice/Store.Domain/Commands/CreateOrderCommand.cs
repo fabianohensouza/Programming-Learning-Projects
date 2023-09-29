@@ -7,8 +7,8 @@ namespace Store.Domain.Commands
 {
     public class CreateOrderCommand : Notifiable, ICommand
     {
-        public CreateOrderCommand() 
-        { 
+        public CreateOrderCommand()
+        {
             Items = new List<CreateOrderItemCommand>();
         }
 
@@ -32,6 +32,7 @@ namespace Store.Domain.Commands
                 .IsGreaterThan(Customer.ToString().Length, 10, "Customer", "Cliente inválido")
                 .HasLen(ZipCode.ToString(), 8, "ZipCode", "CEP inválido")
             );
+
         }
     }
 }
