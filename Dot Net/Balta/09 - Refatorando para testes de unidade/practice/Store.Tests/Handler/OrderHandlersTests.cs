@@ -24,7 +24,7 @@ namespace Store.Tests.Handler
             OrderRepository = new FakeOrderRepository();
         }
 
-        
+
 
         [TestMethod]
         [TestCategory("Handlers")]
@@ -36,7 +36,7 @@ namespace Store.Tests.Handler
                 Assert.AreEqual(customer, null);
                 return;
             }
-            
+
             var command = new CreateOrderCommand();
             command.Customer = customer.Name;
             command.ZipCode = "13411080";
@@ -67,10 +67,13 @@ namespace Store.Tests.Handler
         [TestCategory("Handlers")]
         public void DadoUmPromocodeInexistenteOPedidoDeveSerGeradoNormalmente()
         {
+            var discount = DiscountRepository.Get("75757575");
+            var promoCode = (discount == null) ? null : "75757575";
+
             var command = new CreateOrderCommand();
             command.Customer = CustomerRepository.Get("12345678910").Name;
             command.ZipCode = "34800000";
-            command.PromoCode = "12345678";
+            command.PromoCode = promoCode;
             command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
             command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
             command.Validate();
@@ -82,8 +85,13 @@ namespace Store.Tests.Handler
         [TestCategory("Handlers")]
         public void DadoUmPedidoSemItensOMesmoNaoDeveSerGerado()
         {
-            // TODO: Implementar
-            Assert.IsTrue(true);
+            var command = new CreateOrderCommand();
+            command.Customer = CustomerRepository.Get("12345678910").Name;
+            command.ZipCode = "34800000";
+            command.PromoCode = "75757575";
+            command.Validate();
+
+            Assert.AreEqual(command.Valid, true);
         }
 
         [TestMethod]
@@ -107,7 +115,7 @@ namespace Store.Tests.Handler
         {
             var command = new CreateOrderCommand();
             command.Customer = "Mahatma Ghandi";
-            command.ZipCode = "34800000";
+            command.ZipCode = "348009000";
             command.PromoCode = "12345678";
             command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));
             command.Items.Add(new CreateOrderItemCommand(Guid.NewGuid(), 1));

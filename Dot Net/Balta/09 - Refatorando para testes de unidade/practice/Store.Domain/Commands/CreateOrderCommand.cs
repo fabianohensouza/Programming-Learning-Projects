@@ -30,7 +30,7 @@ namespace Store.Domain.Commands
             AddNotifications(new Contract()
                 .Requires()
                 .IsGreaterThan(Customer.ToString().Length, 10, "Customer", "Cliente inválido")
-                .HasLen(ZipCode.ToString(), 8, "ZipCode", "CEP inválido")
+                .AreEquals(ZipCode.ToString().Length, 8, "ZipCode", "CEP inválido")
             );
 
         }
