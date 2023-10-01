@@ -1,0 +1,11 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core\bin\Debug\net7.0\UtmBuilder.Core.deps.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core\bin\Debug\net7.0\UtmBuilder.Core.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core\bin\Debug\net7.0\UtmBuilder.Core.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core\obj\Debug\net7.0\UtmBuilder.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core\obj\Debug\net7.0\UtmBuilder.Core.AssemblyInfoInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core\obj\Debug\net7.0\UtmBuilder.Core.AssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core\obj\Debug\net7.0\UtmBuilder.Core.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core\obj\Debug\net7.0\UtmBuilder.Core.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core\obj\Debug\net7.0\refint\UtmBuilder.Core.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core\obj\Debug\net7.0\UtmBuilder.Core.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core\obj\Debug\net7.0\ref\UtmBuilder.Core.dll
