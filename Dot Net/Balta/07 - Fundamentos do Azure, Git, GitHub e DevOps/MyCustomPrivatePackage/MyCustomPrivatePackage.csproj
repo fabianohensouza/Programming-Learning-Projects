@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    
+    <PackageId>MyCustomPrivateClass-FHS</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Fabiano Souza</Authors>
+    <Company>fsh.io</Company>
+    <PackageDescription>My Sample Package</PackageDescription>
+    <RepositoryUrl>https://github.com/fabianohensouza/my-custom-private-package</RepositoryUrl>
+  </PropertyGroup>
+
+</Project>

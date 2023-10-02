@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = UtmBuilder.Core
-build_property.ProjectDir = C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core\
+build_property.RootNamespace = balta_git_azure_devops
+build_property.ProjectDir = c:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\07 - Fundamentos do Azure, Git, GitHub e DevOps\balta-git-azure-devops\

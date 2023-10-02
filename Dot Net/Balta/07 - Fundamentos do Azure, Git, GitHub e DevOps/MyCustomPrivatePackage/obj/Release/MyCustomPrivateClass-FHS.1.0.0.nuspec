@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MyCustomPrivateClass-FHS</id>
+    <version>1.0.0</version>
+    <authors>Fabiano Souza</authors>
+    <description>My Sample Package</description>
+    <repository url="https://github.com/fabianohensouza/my-custom-private-package" />
+    <dependencies>
+      <group targetFramework="net7.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\07 - Fundamentos do Azure, Git, GitHub e DevOps\MyCustomPrivatePackage\bin\Release\net7.0\MyCustomPrivatePackage.dll" target="lib\net7.0\MyCustomPrivatePackage.dll" />
+  </files>
+</package>

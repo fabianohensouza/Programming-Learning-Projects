@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <PackageId>MoneyExtensions-FHS</PackageId>
+    <Version>1.0.1</Version>   
+    <License>MIT</License>
+    <Authors>Fabiano Souza</Authors>
+    <Company>FHS</Company>
+    <PackageDescription>Extension to convert decimal to Integer</PackageDescription>
+    <Description>Extension to convert decimal to Integer</Description>
+    <RepositoryUrl>https://github.com/fabianohensouza/money-estensions</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/fabianohensouza/money-estensions</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageTags>maney;int;decimal;convert</PackageTags>
+    <ReleaseNotes>First release of the project</ReleaseNotes>
+    <Title>MoneyExtensions-FHS</Title>
+    <Summary>A extension that converts the decimal values to integer</Summary>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Media\icon.png" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+
+</Project>
