@@ -2,6 +2,8 @@
 {
     public class Url : ValueObject
     {
+        private const string UrlRegexPatterna =
+            @"^(http|https):(\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$";
         /// <summary>
         /// Create a new URL
         /// </summary>

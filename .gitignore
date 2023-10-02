@@ -11,6 +11,8 @@
 *.exe
 *.o
 *.so
+*.cache
+*.nuget.g.props
 
 # Packages #
 ############
