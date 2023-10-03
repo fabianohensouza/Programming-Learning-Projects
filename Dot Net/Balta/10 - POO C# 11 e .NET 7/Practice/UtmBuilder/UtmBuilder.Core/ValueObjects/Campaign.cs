@@ -1,4 +1,6 @@
-﻿namespace UtmBuilder.Core.ValueObjects
+﻿using UtmBuilder.Core.ValueObjects.Exceptions;
+
+namespace UtmBuilder.Core.ValueObjects
 {
     public class Campaign : ValueObject
     {
@@ -26,6 +28,10 @@
             Id = id;
             Term = term;
             Content = content;
+
+            InvalidCampaignException.ThrowIfInvalid(Source, "Source is invalid");
+            InvalidCampaignException.ThrowIfInvalid(Medium, "Medium is invalid");
+            InvalidCampaignException.ThrowIfInvalid(Name, "Name is invalid");
         }
 
         /// <summary>The referrer (e.g. google, newsletter)</summary>

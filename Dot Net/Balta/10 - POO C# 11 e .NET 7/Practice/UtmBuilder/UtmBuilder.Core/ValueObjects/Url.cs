@@ -1,5 +1,4 @@
-﻿using System.Text.RegularExpressions;
-using UtmBuilder.Core.ValueObjects.Exceptions;
+﻿using UtmBuilder.Core.ValueObjects.Exceptions;
 
 namespace UtmBuilder.Core.ValueObjects
 {
