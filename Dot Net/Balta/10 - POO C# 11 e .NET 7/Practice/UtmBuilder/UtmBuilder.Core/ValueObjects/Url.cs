@@ -13,7 +13,6 @@ namespace UtmBuilder.Core.ValueObjects
         {
             Address = address;
             InvalidUrlException.ThrowIfInvalid(address);
-            ;
         }
 
         /// <summary>
