@@ -14,7 +14,7 @@ namespace UtmBuilder.Core.ValueObjects.Exceptions
             string item,
             string message = DefaultErrorMessage)
         {
-            if (string.IsNullOrEmpty(item))
+            if (string.IsNullOrEmpty(item) || item == " ")
                 throw new InvalidCampaignException(message);
         }
     }
