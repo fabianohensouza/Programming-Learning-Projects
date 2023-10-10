@@ -29,7 +29,7 @@ namespace UtmBuilder.Core.Tests.ValueObjects
         [DataRow(" ", true)]
         [DataRow("http", true)]
         [DataRow("banana", true)]
-        [DataRow("https://balta.io", false)]
+        [DataRow("https://utm.io", false)]
         public void TestUrl(
             string link,
             bool expectException)

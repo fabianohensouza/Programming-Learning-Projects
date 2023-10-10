@@ -1,3 +1,4 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\CoverletSourceRootsMapping
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\testhost.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\testhost.exe
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
@@ -85,6 +86,8 @@ C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot N
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\UtmBuilder.Core.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\UtmBuilder.Core.pdb
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\obj\Debug\net7.0\UtmBuilder.Core.Tests.csproj.AssemblyReference.cache
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\obj\Debug\net7.0\UtmBuilder.Core.Tests.GeneratedMSBuildEditorConfig.editorconfig
@@ -97,6 +100,3 @@ C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot N
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\obj\Debug\net7.0\UtmBuilder.Core.Tests.pdb
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\obj\Debug\net7.0\UtmBuilder.Core.Tests.genruntimeconfig.cache
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\obj\Debug\net7.0\ref\UtmBuilder.Core.Tests.dll
-C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\CoverletSourceRootsMapping
-C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\UtmBuilder.Core.dll
-C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\10 - POO C# 11 e .NET 7\Practice\UtmBuilder\UtmBuilder.Core.Tests\bin\Debug\net7.0\UtmBuilder.Core.pdb
