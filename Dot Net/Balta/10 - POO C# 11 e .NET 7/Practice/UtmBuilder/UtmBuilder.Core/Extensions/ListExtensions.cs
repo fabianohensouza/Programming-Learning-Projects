@@ -8,7 +8,9 @@ namespace UtmBuilder.Core.Extensions
             string? value)
         {
             if (!string.IsNullOrEmpty(value))
+            {
                 list.Add($"{key}={value}");
+            }
         }
     }
 }
