@@ -1,0 +1,21 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = MyRazorApp
+build_property.RootNamespace = MyRazorApp
+build_property.ProjectDir = C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\11 - ASP.NET Razor Pages\MyRazorApp\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\11 - ASP.NET Razor Pages\MyRazorApp
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/Fabiano/Documents/MEGAsync/Projetos/Programming-Learning-Projects/Dot Net/Balta/11 - ASP.NET Razor Pages/MyRazorApp/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

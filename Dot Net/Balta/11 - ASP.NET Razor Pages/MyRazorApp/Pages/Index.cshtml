@@ -1,0 +1,14 @@
+@page
+@model MyRazorApp.Pages.Index
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    @for(var i = 0; i <= 10; i++)
+    {
+        <p>Item @i</p>
+    }
+</div>
