@@ -1,10 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 
 namespace MyRazorApp.Pages
 {
@@ -12,13 +6,33 @@ namespace MyRazorApp.Pages
     {
         private readonly ILogger<Index> _logger;
 
+        public List<Category> Categories { get; set; } = new();
+
         public Index(ILogger<Index> logger)
         {
             _logger = logger;
         }
 
-        public void OnGet()
+        public async Task OnGet()
+        {
+            await Task.Delay(1000);
+
+            for (int i = 0; i <= 100; i++)
+            {
+                Categories.Add(
+                    new Category(i, $"Categoria-{i}", i * 5.87M)
+                );
+            }
+
+        }
+
+        public void OnPost()
         {
         }
     }
 }
+
+public record Category(
+    int Id,
+    string Title,
+    decimal Price);
