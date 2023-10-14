@@ -1,28 +1,7 @@
 @page
 @model MyRazorApp.Pages.Index
 @{
-    ViewData["Title"] = "Testing ASP.NET Razor Pages";
-    Layout = "Shared/_Layout.cshtml";
+    ViewData["Title"] = "Welcome! - Testing ASP.NET Razor Pages";
 }
 
-<h2>Categorias</h2>
-<table>
-    <thead>
-        <tr>
-            <td>ID</td>
-            <td>Title</td>
-            <td>Price</td>
-        </tr>
-    </thead>
-    <tbody>
-        <!--  "At"Model is a rference to a index model -->
-        @foreach (var category in Model.Categories)
-        {
-            <tr>
-                <td>@category.Id</td>
-                <td>@category.Title</td>
-                <td>@category.Price.ToString("C", new CultureInfo("us-EN"))</td>
-            </tr>
-        }
-    </tbody>
-</table>
+<h2>Home</h2>

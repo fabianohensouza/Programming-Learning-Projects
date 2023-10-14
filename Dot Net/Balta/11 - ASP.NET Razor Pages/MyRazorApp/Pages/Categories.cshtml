@@ -1,0 +1,33 @@
+@page "~/categorias/{skip?}/{take?}"
+@model MyRazorApp.Pages.Categories
+@{
+    ViewData["Title"] = "Categories";
+}
+
+<h2>Categorias</h2>
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        <!--  "At"Model is a rference to a index model -->
+        @foreach (var category in Model.CategoryList)
+        {
+            <tr>
+                <td>@category.Id</td>
+                <td>@category.Title</td>
+                <td>@category.Price.ToString("C", new CultureInfo("pt-BR"))</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+<a href="">Voltar</a>
+<p>@Model.ReturnSkip</p>
+<p>@Model.Take</p>
+<p>@Model.AdvanceSkip</p>

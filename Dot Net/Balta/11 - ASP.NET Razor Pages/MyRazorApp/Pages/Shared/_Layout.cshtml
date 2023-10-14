@@ -1,9 +1,14 @@
-<h1>@ViewData["Title"]</h1>
-<div>
-    <header>
-        <partial name="NavMenuPartial.cshtml" />
-    </header>
-    <main>
-        @RenderBody()
-    </main>
-</div>
+<head>
+    <title>@ViewData["Title"]</title>
+</head>
+
+<body>
+    <div>
+        <header>
+            <partial name="NavMenuPartial.cshtml" />
+        </header>
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+</body>
