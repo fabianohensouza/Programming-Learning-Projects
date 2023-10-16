@@ -26,3 +26,5 @@ C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot N
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\11 - ASP.NET Razor Pages\MyRazorApp\bin\Debug\net7.0\MyRazorApp.staticwebassets.runtime.json
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\11 - ASP.NET Razor Pages\MyRazorApp\obj\Debug\net7.0\MyRazorApp.RazorAssemblyInfo.cache
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\11 - ASP.NET Razor Pages\MyRazorApp\obj\Debug\net7.0\MyRazorApp.RazorAssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\11 - ASP.NET Razor Pages\MyRazorApp\obj\Debug\net7.0\scopedcss\Pages\About.cshtml.rz.scp.css
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\11 - ASP.NET Razor Pages\MyRazorApp\obj\Debug\net7.0\scopedcss\projectbundle\MyRazorApp.bundle.scp.css

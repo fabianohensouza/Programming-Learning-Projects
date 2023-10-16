@@ -1,5 +1,7 @@
 <head>
     <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/MyRazorApp.styles.css" asp-append-version="true">
 </head>
 
 <body>
@@ -11,4 +13,5 @@
             @RenderBody()
         </main>
     </div>
+    @RenderSection("scripts", false)
 </body>

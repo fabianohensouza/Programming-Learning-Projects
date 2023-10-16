@@ -5,16 +5,14 @@ namespace MyRazorApp.Pages
     public class Categories : PageModel
     {
         public List<Category> CategoryList { get; set; } = new();
-        public int AdvanceTake { get; set; }
+        public string PageName { get; set; } = "/categorias";
         public int DefaultTake { get; set; } = 30;
         public int MaxData { get; set; } = 1200;
-        //public int ReturnSkip { get; set; }
-        //public int AdvanceSkip { get; set; }
         public string? ReturnHref { get; set; } = null;
         public string? AdvanceHref { get; set; } = null;
         public void OnGet(
-            int skip = 0,
-            int take = 30)
+             int take = 30,
+             int skip = 0)
         {
             GeneratePaging(skip, take);
 
@@ -38,12 +36,27 @@ namespace MyRazorApp.Pages
         {
             var advanceSkip = skip + take;
             var advanceTake = DefaultTake;
-            var returnSkip = ((skip - DefaultTake) <= 0) ? 0 : skip - DefaultTake;
+            var returnSkip = skip - DefaultTake;
+
+            if ((skip - DefaultTake) <= 0)
+            {
+                returnSkip = 0;
+            }
 
             if ((take + skip) >= MaxData)
             {
                 advanceSkip = skip;
                 advanceTake = MaxData - skip;
+            }
+
+            if (skip != 0)
+            {
+                ReturnHref = $"{PageName}/{returnSkip}/{DefaultTake}";
+            }
+
+            if ((take + skip) < MaxData)
+            {
+                AdvanceHref = $"{PageName}/{advanceSkip}/{advanceTake}";
             }
         }
 

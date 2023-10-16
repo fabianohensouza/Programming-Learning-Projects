@@ -27,10 +27,12 @@
 
 </table>
 
-<a href="">&larr; Voltar</a>
-<p>@Model.AdvanceSkip</p>
-<p>@Model.AdvanceTake</p>
-<p>---------------------</p>
-<a href="">&rarr; Avançar</a>
-<p>@Model.ReturnSkip</p>
-<p>@Model.ReturnTake</p>
+@if (Model.ReturnHref != null)
+{
+    <a href="@Model.ReturnHref">&larr; Voltar / </a>
+}
+
+@if (Model.AdvanceHref != null)
+{
+    <a href="@Model.AdvanceHref"> Avançar &rarr;</a>
+}
