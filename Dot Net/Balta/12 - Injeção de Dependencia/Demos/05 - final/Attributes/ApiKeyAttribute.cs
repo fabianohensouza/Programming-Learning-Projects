@@ -9,12 +9,17 @@ public class ApiKeyAttribute : Attribute, IAsyncActionFilter
 {
     private const string ApiKeyName = "api_key";
     private const string ApiKey = "balta_demo_IlTevUM/z0ey3NwCV/unWg==";
-    
-    public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+
+    public async Task OnActionExecutionAsync(
+        ActionExecutingContext context,
+        ActionExecutionDelegate next)
     {
-        var service = context.HttpContext.RequestServices.GetService<IWeatherService>();
-        var forecasts = service.Get();
-        
+        var service = context
+            .HttpContext
+            .RequestServices
+            .GetService<IWeatherService>();
+        var forecasts = service?.Get();
+
         if (!context.HttpContext.Request.Query.TryGetValue(ApiKeyName, out var extractedApiKey))
         {
             context.Result = new ContentResult()

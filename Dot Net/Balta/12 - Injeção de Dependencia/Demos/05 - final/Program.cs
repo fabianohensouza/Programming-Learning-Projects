@@ -14,6 +14,7 @@ using (var scope = app.Services.CreateScope())
     var service = scope
         .ServiceProvider
         .GetRequiredService<IWeatherService>();
+
     service.Get();
 }
 
