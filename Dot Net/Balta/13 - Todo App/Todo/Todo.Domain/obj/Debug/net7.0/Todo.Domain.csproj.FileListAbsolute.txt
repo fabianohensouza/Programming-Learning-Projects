@@ -1,0 +1,11 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\bin\Debug\net7.0\Todo.Domain.deps.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\bin\Debug\net7.0\Todo.Domain.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\bin\Debug\net7.0\Todo.Domain.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\obj\Debug\net7.0\Todo.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\obj\Debug\net7.0\Todo.Domain.AssemblyInfoInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\obj\Debug\net7.0\Todo.Domain.AssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\obj\Debug\net7.0\Todo.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\obj\Debug\net7.0\Todo.Domain.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\obj\Debug\net7.0\refint\Todo.Domain.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\obj\Debug\net7.0\Todo.Domain.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\obj\Debug\net7.0\ref\Todo.Domain.dll

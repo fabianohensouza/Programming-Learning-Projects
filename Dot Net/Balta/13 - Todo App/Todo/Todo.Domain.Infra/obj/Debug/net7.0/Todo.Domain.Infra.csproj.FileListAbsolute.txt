@@ -1,0 +1,15 @@
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\bin\Debug\net7.0\Todo.Domain.Infra.deps.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\bin\Debug\net7.0\Todo.Domain.Infra.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\bin\Debug\net7.0\Todo.Domain.Infra.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\Todo.Domain.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\Todo.Domain.Infra.AssemblyInfoInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\Todo.Domain.Infra.AssemblyInfo.cs
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\Todo.Domain.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\Todo.Domain.Infra.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\refint\Todo.Domain.Infra.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\Todo.Domain.Infra.pdb
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\ref\Todo.Domain.Infra.dll
+c:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\bin\Debug\net7.0\Todo.Domain.dll
+c:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\bin\Debug\net7.0\Todo.Domain.pdb
+c:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\Todo.Domain.Infra.csproj.AssemblyReference.cache
+c:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\Todo.Domain.Infra.csproj.CopyComplete
