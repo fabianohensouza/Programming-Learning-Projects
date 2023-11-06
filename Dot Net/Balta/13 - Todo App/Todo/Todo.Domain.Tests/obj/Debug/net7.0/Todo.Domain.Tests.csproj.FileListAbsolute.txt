@@ -97,3 +97,7 @@ C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot N
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Tests\obj\Debug\net7.0\Todo.Domain.Tests.pdb
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Tests\obj\Debug\net7.0\Todo.Domain.Tests.genruntimeconfig.cache
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Tests\obj\Debug\net7.0\ref\Todo.Domain.Tests.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Tests\bin\Debug\net7.0\CoverletSourceRootsMapping
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Tests\bin\Debug\net7.0\Flunt.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Tests\bin\Debug\net7.0\Todo.Domain.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Tests\bin\Debug\net7.0\Todo.Domain.pdb

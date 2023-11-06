@@ -9,3 +9,4 @@ C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot N
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\obj\Debug\net7.0\refint\Todo.Domain.dll
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\obj\Debug\net7.0\Todo.Domain.pdb
 C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\obj\Debug\net7.0\ref\Todo.Domain.dll
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain\obj\Debug\net7.0\Todo.Domain.csproj.AssemblyReference.cache
