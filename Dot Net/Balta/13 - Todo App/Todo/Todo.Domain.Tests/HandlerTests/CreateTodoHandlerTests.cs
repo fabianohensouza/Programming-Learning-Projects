@@ -3,7 +3,7 @@ using Todo.Domain.Commands;
 namespace Todo.Domain.Tests.CommandTests
 {
     [TestClass]
-    public class CreateTodoCommandClassTests
+    public class CreateTodoHandlerTests
     {
         private readonly CreateTodoCommand _invalidCommand = new CreateTodoCommand(
             "",
@@ -14,7 +14,7 @@ namespace Todo.Domain.Tests.CommandTests
             "fabiano.souza",
             DateTime.Now.AddDays(30));
 
-        public CreateTodoCommandClassTests()
+        public CreateTodoHandlerTests()
         {
             _invalidCommand.Validate();
             _validCommand.Validate();
