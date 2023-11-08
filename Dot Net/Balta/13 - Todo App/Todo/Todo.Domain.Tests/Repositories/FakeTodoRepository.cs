@@ -14,5 +14,14 @@ namespace Todo.Domain.Tests.Repositories
         {
 
         }
+
+        public TodoItem GetById(Guid id, string user)
+        {
+            return new TodoItem(
+                "Titulo da tarefa",
+                "fabiano.souza",
+                DateTime.Now.AddMonths(1)
+        );
+        }
     }
 }
