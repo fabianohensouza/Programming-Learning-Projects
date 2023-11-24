@@ -13,3 +13,5 @@ c:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot N
 c:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\bin\Debug\net7.0\Todo.Domain.pdb
 c:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\Todo.Domain.Infra.csproj.AssemblyReference.cache
 c:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\Todo.Domain.Infra.csproj.CopyComplete
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\bin\Debug\net7.0\Todo.Domain.Infra.runtimeconfig.json
+C:\Users\Fabiano\Documents\MEGAsync\Projetos\Programming-Learning-Projects\Dot Net\Balta\13 - Todo App\Todo\Todo.Domain.Infra\obj\Debug\net7.0\Todo.Domain.Infra.genruntimeconfig.cache
